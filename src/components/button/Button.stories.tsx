@@ -28,3 +28,21 @@ export const Secondary: Story = {
     intent: 'secondary',
   },
 };
+
+export const Small: Story = {
+  args: {
+    size: 'small',
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    size: 'medium',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
+  },
+};
