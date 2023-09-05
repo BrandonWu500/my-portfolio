@@ -20,29 +20,34 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     intent: 'primary',
+    label: 'Contact Me',
   },
 };
 
 export const Secondary: Story = {
   args: {
     intent: 'secondary',
+    label: 'Contact Me',
   },
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
+    label: 'Contact Me',
   },
 };
 
 export const Medium: Story = {
   args: {
     size: 'medium',
+    label: 'Contact Me',
   },
 };
 
 export const Large: Story = {
   args: {
     size: 'large',
+    label: 'Contact Me',
   },
 };

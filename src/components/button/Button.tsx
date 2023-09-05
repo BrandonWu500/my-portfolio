@@ -14,8 +14,10 @@ const buttonStyles = cva(`uppercase text-neutral-50 font-bold border`, {
   },
 });
 
-type Props = VariantProps<typeof buttonStyles> & {};
-const Button = ({ intent = 'primary', size = 'small' }: Props) => {
-  return <button className={buttonStyles({ intent, size })}>Button</button>;
+type Props = VariantProps<typeof buttonStyles> & {
+  label: string;
+};
+const Button = ({ intent = 'primary', size = 'small', label }: Props) => {
+  return <button className={buttonStyles({ intent, size })}>{label}</button>;
 };
 export default Button;
