@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
+import arrowDownTrayLarge from '/public/arrow-down-tray-large.svg';
+import arrowDownTrayMedium from '/public/arrow-down-tray-medium.svg';
+import arrowDownTraySmall from '/public/arrow-down-tray-small.svg';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -49,5 +52,28 @@ export const Large: Story = {
   args: {
     size: 'large',
     label: 'Contact Me',
+  },
+};
+
+export const SmallIcon: Story = {
+  args: {
+    label: 'Download Resume',
+    svgIcon: arrowDownTraySmall,
+  },
+};
+
+export const MediumIcon: Story = {
+  args: {
+    size: 'medium',
+    label: 'Download Resume',
+    svgIcon: arrowDownTrayMedium,
+  },
+};
+
+export const LargeIcon: Story = {
+  args: {
+    size: 'large',
+    label: 'Download Resume',
+    svgIcon: arrowDownTrayLarge,
   },
 };
