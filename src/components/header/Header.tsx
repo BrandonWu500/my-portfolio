@@ -21,6 +21,27 @@ const Header = (props: Props) => {
       </Link>
 
       <Image src={mobileNavIcon} alt="menu" className="lg:hidden" />
+
+      {/* DESKTOP NAV */}
+      <nav className="hidden lg:block">
+        <ul className="flex items-center gap-[72px] font-heading text-2xl font-bold">
+          <li>
+            <Link href={'#hero'}>Home</Link>
+          </li>
+          <li>
+            <Link href={'#about'}>About</Link>
+          </li>
+          <li>
+            <Link href={'#skills'}>Skills</Link>
+          </li>
+          <li>
+            <Link href={'#projects'}>Projects</Link>
+          </li>
+          <li>
+            <Link href={'#contact'}>Contact</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };
