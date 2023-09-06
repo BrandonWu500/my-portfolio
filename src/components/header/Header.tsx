@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import desktopLogo from '/public/desktop-logo.svg';
 import mobileLogo from '/public/mobile-logo.svg';
@@ -6,11 +7,11 @@ import mobileLogo from '/public/mobile-logo.svg';
 type Props = {};
 const Header = (props: Props) => {
   return (
-    <div className="sticky top-0 w-screen bg-neutral-900 p-4 text-neutral-50">
-      {/* MOBILE LOGO */}
-      <Image src={mobileLogo} alt="logo" className="lg:hidden" />
-      {/* DESKTOP LOGO */}
-      <Image src={desktopLogo} alt="logo" className="hidden lg:block" />
+    <div className="sticky top-0 flex w-screen items-center justify-between bg-neutral-900 p-4 text-neutral-50">
+      <Link href={'/'}>
+        <Image src={mobileLogo} alt="logo" className="lg:hidden" />
+        <Image src={desktopLogo} alt="logo" className="hidden lg:block" />
+      </Link>
     </div>
   );
 };
