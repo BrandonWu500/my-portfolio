@@ -2,6 +2,7 @@ import { Besley, Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Button from '../button/Button';
 import mobileNavIcon from '/public/bars-3.svg';
 import desktopLogo from '/public/desktop-logo.svg';
 import mobileLogo from '/public/mobile-logo.svg';
@@ -22,26 +23,33 @@ const Header = (props: Props) => {
 
       <Image src={mobileNavIcon} alt="menu" className="lg:hidden" />
 
-      {/* DESKTOP NAV */}
-      <nav className="hidden lg:block">
-        <ul className="flex items-center gap-[72px] font-heading text-2xl font-bold">
-          <li>
-            <Link href={'#hero'}>Home</Link>
-          </li>
-          <li>
-            <Link href={'#about'}>About</Link>
-          </li>
-          <li>
-            <Link href={'#skills'}>Skills</Link>
-          </li>
-          <li>
-            <Link href={'#projects'}>Projects</Link>
-          </li>
-          <li>
-            <Link href={'#contact'}>Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="hidden items-center gap-[72px] lg:flex">
+        {/* DESKTOP NAV */}
+        <nav>
+          <ul className="flex items-center gap-[72px] font-heading text-2xl font-bold">
+            <li>
+              <Link href={'#hero'}>Home</Link>
+            </li>
+            <li>
+              <Link href={'#about'}>About</Link>
+            </li>
+            <li>
+              <Link href={'#skills'}>Skills</Link>
+            </li>
+            <li>
+              <Link href={'#projects'}>Projects</Link>
+            </li>
+            <li>
+              <Link href={'#contact'}>Contact</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* DESKTOP CTA */}
+        <Link href={'#contact'}>
+          <Button label="Get in touch" size={'medium'} />
+        </Link>
+      </div>
     </div>
   );
 };
