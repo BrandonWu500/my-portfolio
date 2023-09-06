@@ -26,7 +26,7 @@ const Header = (props: Props) => {
       <div className="hidden items-center gap-[72px] lg:flex">
         {/* DESKTOP NAV */}
         <nav>
-          <ul className="flex items-center gap-[72px] font-heading font-bold xl:text-2xl">
+          <ul className="flex items-center gap-[72px] font-heading font-semibold xl:text-2xl">
             <li>
               <Link href={'#hero'}>Home</Link>
             </li>
