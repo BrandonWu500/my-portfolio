@@ -1,9 +1,12 @@
 import { VariantProps, cva } from 'cva';
+import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import { useMemo } from 'react';
 
+const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
+
 const buttonStyles = cva(
-  `uppercase text-neutral-50 font-bold border flex items-center gap-4`,
+  `${inter.variable} font-body uppercase text-neutral-50 font-bold border flex items-center gap-4`,
   {
     variants: {
       intent: {
