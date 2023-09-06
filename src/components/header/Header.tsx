@@ -26,7 +26,7 @@ const Header = (props: Props) => {
       <div className="hidden items-center gap-[72px] lg:flex">
         {/* DESKTOP NAV */}
         <nav>
-          <ul className="flex items-center gap-[72px] font-heading text-2xl font-bold">
+          <ul className="flex items-center gap-[72px] font-heading font-bold xl:text-2xl">
             <li>
               <Link href={'#hero'}>Home</Link>
             </li>
@@ -46,7 +46,10 @@ const Header = (props: Props) => {
         </nav>
 
         {/* DESKTOP CTA */}
-        <Link href={'#contact'}>
+        <Link href={'#contact'} className="hidden lg:block xl:hidden">
+          <Button label="Get in touch" size={'small'} />
+        </Link>
+        <Link href={'#contact'} className="hidden xl:block">
           <Button label="Get in touch" size={'medium'} />
         </Link>
       </div>
