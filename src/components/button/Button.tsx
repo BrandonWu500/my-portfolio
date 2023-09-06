@@ -1,5 +1,6 @@
 import { VariantProps, cva } from 'cva';
 import Image from 'next/image';
+import { useMemo } from 'react';
 
 const buttonStyles = cva(
   `uppercase text-neutral-50 font-bold border flex items-center gap-4`,
@@ -28,9 +29,30 @@ const Button = ({
   label,
   svgIcon,
 }: Props) => {
+  const svgSize = useMemo(() => {
+    if (!svgIcon) return;
+
+    switch (size) {
+      case 'small':
+        return 24;
+
+      case 'medium':
+        return 28;
+
+      case 'large':
+        return 32;
+
+      default:
+        return 24;
+    }
+  }, [size, svgIcon]);
+
   return (
     <button className={buttonStyles({ intent, size })}>
-      {label} {svgIcon && <Image src={svgIcon} alt="icon" />}
+      {label}
+      {svgIcon && (
+        <Image src={svgIcon} alt="icon" width={svgSize} height={svgSize} />
+      )}
     </button>
   );
 };
