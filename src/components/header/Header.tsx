@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import mobileNavIcon from '/public/bars-3.svg';
 import desktopLogo from '/public/desktop-logo.svg';
 import mobileLogo from '/public/mobile-logo.svg';
 
@@ -12,6 +13,8 @@ const Header = (props: Props) => {
         <Image src={mobileLogo} alt="logo" className="lg:hidden" />
         <Image src={desktopLogo} alt="logo" className="hidden lg:block" />
       </Link>
+
+      <Image src={mobileNavIcon} alt="menu" className="lg:hidden" />
     </div>
   );
 };
