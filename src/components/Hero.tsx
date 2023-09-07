@@ -14,7 +14,7 @@ const Hero = (props: Props) => {
   return (
     <div
       id="hero"
-      className="flex flex-col items-center gap-12 bg-neutral-900 px-12 py-7 text-neutral-50"
+      className="heroBg flex flex-col items-center gap-12 px-12 py-7 text-neutral-50"
     >
       <div className="flex flex-col items-center gap-2">
         <Image
@@ -42,7 +42,7 @@ const Hero = (props: Props) => {
         </Link>
       </div>
       <Link href={'#contact'}>
-        <Button label="Contact Me" />
+        <Button label="Contact Me" className="bg-transparent" />
       </Link>
     </div>
   );
