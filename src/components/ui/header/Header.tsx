@@ -14,7 +14,7 @@ type Props = {};
 const Header = (props: Props) => {
   return (
     <div
-      className={`${besley.variable} ${inter.variable} sticky top-0 flex w-screen items-center justify-between bg-neutral-900 p-4 text-neutral-50`}
+      className={`${besley.variable} ${inter.variable} sticky top-0 z-50 flex w-screen items-center justify-between bg-neutral-900 p-4 text-neutral-50`}
     >
       <Link href={'/'}>
         <Image src={mobileLogo} alt="logo" className="lg:hidden" />
