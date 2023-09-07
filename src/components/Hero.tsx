@@ -1,13 +1,19 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '@/components/ui/button/Button';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 
+import { BREAKPOINTS } from '@/constants/breakpoints';
 import { heroSocialLinks } from '@/constants/data';
 import headshot from '/public/my-portrait.jpg';
 
 type Props = {};
 const Hero = (props: Props) => {
+  const { width, height } = useWindowDimensions();
+
   return (
     <div
       id="hero"
@@ -42,9 +48,31 @@ const Hero = (props: Props) => {
           </Link>
         ))}
       </div>
-      <Link href={'#contact'}>
-        <Button label="Contact Me" className="bg-transparent" />
-      </Link>
+      <div className="flex w-full items-center justify-center lg:gap-12 xl:gap-[72px]">
+        <Link href={'#contact'}>
+          {width && width >= BREAKPOINTS.XL ? (
+            <Button label="Contact Me" intent={'secondary'} size={'medium'} />
+          ) : width && width >= BREAKPOINTS.LG ? (
+            <Button label="Contact Me" intent={'secondary'} />
+          ) : (
+            <Button label="Contact Me" className="bg-transparent" />
+          )}
+        </Link>
+        <Link href={'#about'}>
+          {width && width >= BREAKPOINTS.XL ? (
+            <Button
+              label="Learn More"
+              className="bg-transparent"
+              size={'medium'}
+            />
+          ) : (
+            width &&
+            width >= BREAKPOINTS.LG && (
+              <Button label="Learn More" className="bg-transparent" />
+            )
+          )}
+        </Link>
+      </div>
     </div>
   );
 };
