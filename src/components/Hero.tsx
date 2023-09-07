@@ -12,15 +12,15 @@ import headshot from '/public/my-portrait.jpg';
 
 type Props = {};
 const Hero = (props: Props) => {
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <div
       id="hero"
-      className="heroBg flex flex-col items-center gap-12 px-12 py-7 text-neutral-50"
+      className="heroBg flex flex-col items-center gap-12 px-12 py-7 pb-12 text-neutral-50 xl:gap-[72px]"
     >
       <div className="flex flex-col items-center gap-2 lg:gap-4">
-        <div className="relative h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] xl:h-[200px] xl:w-[200px]">
+        <div className="relative h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] xl:my-4 xl:h-[200px] xl:w-[200px]">
           <Image
             src={headshot}
             alt="my headshot"
@@ -30,7 +30,7 @@ const Hero = (props: Props) => {
             sizes="(max-width: 1024px) 100px, (max-width: 1280px) 150px, 200px"
           />
         </div>
-        <h1 className="font-heading text-[40px] font-bold lg:text-5xl xl:text-7xl">
+        <h1 className="font-heading text-[40px] font-bold lg:text-5xl xl:my-4 xl:text-7xl">
           Brandon Wu
         </h1>
         <h3 className="font-heading font-semibold text-neutral-100 lg:text-xl xl:text-[32px]">
