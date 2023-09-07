@@ -41,3 +41,19 @@ export const Large: Story = {
     size: 'large',
   },
 };
+
+export const Primary: Story = {
+  args: {
+    svgIcon: storybookIcon,
+    label: 'Storybook',
+    intent: 'primary',
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    svgIcon: nextjsIcon,
+    label: 'Next.js',
+    intent: 'secondary',
+  },
+};
