@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Button from '@/components/ui/button/Button';
 import { myGithubLink, myLinkedinLink } from '@/constants/data';
 
 import githubIcon from '/public/github.svg';
@@ -37,6 +38,9 @@ const Hero = (props: Props) => {
           <Image src={mailIcon} alt="mail icon" />
         </Link>
       </div>
+      <Link href={'#contact'}>
+        <Button label="Contact Me" />
+      </Link>
     </div>
   );
 };
