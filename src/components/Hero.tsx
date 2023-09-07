@@ -1,5 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
+import { myGithubLink, myLinkedinLink } from '@/constants/data';
+
+import githubIcon from '/public/github.svg';
+import linkedinIcon from '/public/linkedin.svg';
+import mailIcon from '/public/mail.svg';
 import headshot from '/public/my-portrait.jpg';
 
 type Props = {};
@@ -19,6 +25,17 @@ const Hero = (props: Props) => {
         <h3 className="font-heading font-semibold text-neutral-100">
           {`Web Designer & Web Developer`}
         </h3>
+      </div>
+      <div className="flex items-center gap-12">
+        <Link href={myGithubLink}>
+          <Image src={githubIcon} alt="github icon" width={32} height={32} />
+        </Link>
+        <Link href={myLinkedinLink}>
+          <Image src={linkedinIcon} alt="linkedin icon" />
+        </Link>
+        <Link href={'#contact'}>
+          <Image src={mailIcon} alt="mail icon" />
+        </Link>
       </div>
     </div>
   );
