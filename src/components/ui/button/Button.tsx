@@ -2,6 +2,7 @@ import { VariantProps, cva } from 'cva';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import { useMemo } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
 
@@ -25,12 +26,14 @@ const buttonStyles = cva(
 type Props = VariantProps<typeof buttonStyles> & {
   label: string;
   svgIcon?: any;
+  className?: string;
 };
 const Button = ({
   intent = 'primary',
   size = 'small',
   label,
   svgIcon,
+  className,
 }: Props) => {
   const svgSize = useMemo(() => {
     if (!svgIcon) return;
@@ -51,7 +54,7 @@ const Button = ({
   }, [size, svgIcon]);
 
   return (
-    <button className={buttonStyles({ intent, size })}>
+    <button className={twMerge(buttonStyles({ intent, size }), className)}>
       {label}
       {svgIcon && (
         <Image src={svgIcon} alt="icon" width={svgSize} height={svgSize} />
