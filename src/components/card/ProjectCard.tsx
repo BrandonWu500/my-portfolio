@@ -13,7 +13,7 @@ const besley = Besley({ subsets: ['latin'], variable: '--heading-font' });
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
 
 const projectCardStyles = cva(
-  `${besley.variable} ${inter.variable} bg-neutral-700 text-neutral-50`,
+  `${besley.variable} ${inter.variable} bg-neutral-700 text-neutral-50 shadow`,
   {
     variants: {
       size: {
