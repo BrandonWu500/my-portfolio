@@ -1,5 +1,9 @@
 import { ProjectType } from '@/types';
+
 import carRentalThumbnail from '/public/car-rental-project-thumbnail.png';
+import githubIcon from '/public/github.svg';
+import linkedinIcon from '/public/linkedin.svg';
+import mailIcon from '/public/mail.svg';
 
 export const projects: ProjectType[] = [
   {
@@ -22,5 +26,17 @@ export const projects: ProjectType[] = [
   },
 ];
 
-export const myGithubLink = 'https://github.com/BrandonWu500';
-export const myLinkedinLink = 'https://www.linkedin.com/in/brandonwu500';
+export const heroSocialLinks = [
+  {
+    url: 'https://github.com/BrandonWu500',
+    icon: githubIcon,
+  },
+  {
+    url: 'https://www.linkedin.com/in/brandonwu500',
+    icon: linkedinIcon,
+  },
+  {
+    url: '#contact',
+    icon: mailIcon,
+  },
+];
