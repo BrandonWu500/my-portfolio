@@ -12,7 +12,10 @@ import headshot from '/public/my-portrait.jpg';
 type Props = {};
 const Hero = (props: Props) => {
   return (
-    <div className="flex flex-col items-center gap-12 bg-neutral-900 px-12 py-7 text-neutral-50">
+    <div
+      id="hero"
+      className="flex flex-col items-center gap-12 bg-neutral-900 px-12 py-7 text-neutral-50"
+    >
       <div className="flex flex-col items-center gap-2">
         <Image
           src={headshot}
