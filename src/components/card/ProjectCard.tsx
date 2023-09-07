@@ -1,10 +1,12 @@
-import { ProjectType } from '@/types';
 import { VariantProps, cva } from 'cva';
 import { Besley, Inter } from 'next/font/google';
 import Image from 'next/image';
-
 import Link from 'next/link';
 import { useMemo } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+import { ProjectType } from '@/types';
+
 import figmaIcon from '/public/figma.svg';
 import githubIcon from '/public/github.svg';
 import globeIcon from '/public/globe.svg';
@@ -68,26 +70,49 @@ const ProjectCard = ({
         height={imgHeight}
       />
       <div className="flex flex-col gap-4 p-4">
-        <h5 className="font-heading text-lg font-bold">{title}</h5>
-        <p className="max-w-xs font-body">{description}</p>
+        <h5
+          className={twMerge(
+            'font-heading text-lg font-bold',
+            size === 'large' && 'text-xl'
+          )}
+        >
+          {title}
+        </h5>
+        <p
+          className={twMerge(
+            'max-w-xs font-body',
+            size === 'large' && 'text-lg'
+          )}
+        >
+          {description}
+        </p>
         <div className="flex gap-8">
           {designLink && (
             <Link
               href={designLink}
-              className="flex items-center gap-2 font-body text-sm font-medium"
+              className={twMerge(
+                'flex items-center gap-2 font-body text-sm font-medium',
+                size === 'large' && 'text-base'
+              )}
             >
               <Image src={figmaIcon} alt="figma icon" /> Design
             </Link>
           )}
           <Link
             href={codeLink}
-            className="flex items-center gap-2 font-body text-sm font-medium"
+            className={twMerge(
+              'flex items-center gap-2 font-body text-sm font-medium',
+              size === 'large' && 'text-base'
+            )}
           >
             <Image src={githubIcon} alt="github icon" /> Code
           </Link>
           <Link
             href={deployLink}
-            className="flex items-center gap-2 font-body text-sm font-medium"
+            className={twMerge(
+              'flex items-center gap-2 font-body text-sm font-medium',
+              size === 'large' && 'text-base'
+            )}
           >
             <Image src={globeIcon} alt="globe icon" /> Deployment
           </Link>
