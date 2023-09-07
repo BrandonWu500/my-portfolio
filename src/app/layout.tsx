@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Besley, Inter } from 'next/font/google';
 
+import Header from '@/components/ui/header/Header';
 import './globals.css';
 
 const besley = Besley({ subsets: ['latin'], variable: '--heading-font' });
@@ -18,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${besley.variable} ${inter.variable}`}>{children}</body>
+      <body className={`${besley.variable} ${inter.variable}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
