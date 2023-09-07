@@ -9,9 +9,13 @@ const skillStyles = cva(
   `${inter.variable} font-body flex flex-col items-center gap-2 p-2`,
   {
     variants: {
+      intent: {
+        primary: 'bg-neutral-700 text-neutral-50',
+        secondary: 'bg-neutral-200 text-neutral-900',
+      },
       size: {
-        small: 'bg-neutral-200 text-neutral-900 text-xs',
-        large: 'bg-neutral-700 text-neutral-50',
+        small: 'text-xs',
+        large: '',
       },
     },
   }
@@ -21,7 +25,12 @@ type Props = VariantProps<typeof skillStyles> & {
   svgIcon: StaticImageData;
   label: string;
 };
-const Skill = ({ size = 'small', svgIcon, label }: Props) => {
+const Skill = ({
+  size = 'small',
+  intent = 'primary',
+  svgIcon,
+  label,
+}: Props) => {
   const svgSize = useMemo(() => {
     if (!svgIcon) return;
 
@@ -38,7 +47,7 @@ const Skill = ({ size = 'small', svgIcon, label }: Props) => {
   }, [size, svgIcon]);
 
   return (
-    <div className={skillStyles({ size })}>
+    <div className={skillStyles({ size, intent })}>
       <Image src={svgIcon} alt="skill icon" width={svgSize} height={svgSize} />
       <p className="font-medium">{label}</p>
     </div>
