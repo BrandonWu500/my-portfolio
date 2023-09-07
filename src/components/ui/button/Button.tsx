@@ -7,11 +7,11 @@ import { twMerge } from 'tailwind-merge';
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
 
 const buttonStyles = cva(
-  `${inter.variable} font-body uppercase text-neutral-50 font-bold border flex items-center gap-4`,
+  `${inter.variable} font-body uppercase text-neutral-50 font-bold border border-neutral-700 flex items-center gap-4`,
   {
     variants: {
       intent: {
-        primary: `bg-neutral-900 border-neutral-700`,
+        primary: `bg-neutral-900`,
         secondary: `bg-neutral-700`,
       },
       size: {
