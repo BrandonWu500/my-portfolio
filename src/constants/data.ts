@@ -21,3 +21,6 @@ export const projects: ProjectType[] = [
       'https://www.figma.com/file/WnCAyzR6Wf6o70u9D2JOp9/My-Portfolio-Web-Design?type=design&node-id=109%3A8334&mode=design&t=s4uJvIVlACkYJkgZ-1',
   },
 ];
+
+export const myGithubLink = 'https://github.com/BrandonWu500';
+export const myLinkedinLink = 'https://www.linkedin.com/in/brandonwu500';
