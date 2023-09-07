@@ -16,17 +16,21 @@ const Hero = (props: Props) => {
       id="hero"
       className="heroBg flex flex-col items-center gap-12 px-12 py-7 text-neutral-50"
     >
-      <div className="flex flex-col items-center gap-2">
-        <Image
-          src={headshot}
-          alt="my headshot"
-          width={100}
-          height={100}
-          className="relative h-[100px] w-[100px] rounded-full border-[3px] border-neutral-50 object-cover"
-          priority
-        />
-        <h1 className="font-heading text-[40px] font-bold">Brandon Wu</h1>
-        <h3 className="font-heading font-semibold text-neutral-100">
+      <div className="flex flex-col items-center gap-2 lg:gap-4">
+        <div className="relative h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] xl:h-[200px] xl:w-[200px]">
+          <Image
+            src={headshot}
+            alt="my headshot"
+            className="rounded-full border-[3px] border-neutral-50 object-cover xl:border-4"
+            priority
+            fill
+            sizes="(max-width: 1024px) 100px, (max-width: 1280px) 150px, 200px"
+          />
+        </div>
+        <h1 className="font-heading text-[40px] font-bold lg:text-5xl xl:text-7xl">
+          Brandon Wu
+        </h1>
+        <h3 className="font-heading font-semibold text-neutral-100 lg:text-xl xl:text-[32px]">
           {`Web Designer & Web Developer`}
         </h3>
       </div>
