@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { projects } from '../../constants/data';
+import { projects } from '../../../constants/data';
 import ProjectCard from './ProjectCard';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
