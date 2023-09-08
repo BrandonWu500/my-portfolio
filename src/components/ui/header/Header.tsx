@@ -11,7 +11,6 @@ import { navLinks } from '../../../constants/data';
 import Button from '../button/Button';
 
 import mobileNavIcon from '/public/bars-3.svg';
-import desktopLogo from '/public/desktop-logo.svg';
 import mobileLogo from '/public/mobile-logo.svg';
 import closeIcon from '/public/x-circle.svg';
 
@@ -24,66 +23,64 @@ const Header = (props: Props) => {
 
   return (
     <div
-      className={`${besley.variable} ${inter.variable} sticky top-0 z-50 flex h-24 w-screen items-center justify-between bg-neutral-900 p-8 text-neutral-50`}
+      className={`${besley.variable} ${inter.variable} sticky top-0 z-50  w-screen  bg-neutral-900 text-neutral-50`}
     >
-      <Link href={'/'} onClick={() => setIsOpen(false)}>
-        <Image src={mobileLogo} alt="logo" className="lg:hidden" />
-        <Image src={desktopLogo} alt="logo" className="hidden lg:block" />
-      </Link>
+      <div className="container mx-auto flex h-24 items-center justify-between p-8 xl:justify-evenly xl:pl-16">
+        <Link href={'/'} onClick={() => setIsOpen(false)}>
+          <Image src={mobileLogo} alt="logo" />
+        </Link>
 
-      <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? (
-          <Image src={closeIcon} alt="close" width={48} height={48} />
-        ) : (
-          <Image src={mobileNavIcon} alt="menu" />
+        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <Image src={closeIcon} alt="close" width={48} height={48} />
+          ) : (
+            <Image src={mobileNavIcon} alt="menu" />
+          )}
+        </button>
+
+        {/* MOBILE NAV OVERLAY */}
+        {isOpen && (
+          <div
+            className={
+              'fixed left-0 top-0 z-40 mt-24 h-screen w-full bg-neutral-900/80'
+            }
+            onClick={() => setIsOpen(false)}
+          ></div>
         )}
-      </button>
 
-      {/* MOBILE NAV OVERLAY */}
-      {isOpen && (
+        {/* MOBILE NAV */}
         <div
-          className={
-            'fixed left-0 top-0 z-40 mt-24 h-screen w-full bg-neutral-900/80'
-          }
-          onClick={() => setIsOpen(false)}
-        ></div>
-      )}
-
-      {/* MOBILE NAV */}
-      <div
-        className={twMerge(
-          'fixed -left-[250px] top-0 z-50 mt-24 h-screen w-[250px] bg-neutral-900 transition-transform duration-500 ease-in-out',
-          isOpen && 'translate-x-[250px]'
-        )}
-      >
-        <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
-          {navLinks.map((link) => (
-            <li key={link.label} onClick={() => setIsOpen(false)}>
-              <Link href={link.url}>{link.label}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="hidden items-center gap-[72px] lg:flex">
-        {/* DESKTOP NAV */}
-        <nav>
-          <ul className="flex items-center gap-[72px] font-heading font-semibold xl:text-2xl">
+          className={twMerge(
+            'fixed -left-[250px] top-0 z-50 mt-24 h-screen w-[250px] bg-neutral-900 transition-transform duration-500 ease-in-out',
+            isOpen && 'translate-x-[250px]'
+          )}
+        >
+          <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
             {navLinks.map((link) => (
-              <li key={link.label}>
+              <li key={link.label} onClick={() => setIsOpen(false)}>
                 <Link href={link.url}>{link.label}</Link>
               </li>
             ))}
           </ul>
-        </nav>
+        </div>
 
-        {/* DESKTOP CTA */}
-        <Link href={'#contact'} className="hidden lg:block xl:hidden">
-          <Button label="Get in touch" size={'small'} />
-        </Link>
-        <Link href={'#contact'} className="hidden xl:block">
-          <Button label="Get in touch" size={'medium'} />
-        </Link>
+        <div className="hidden items-center gap-[72px] lg:flex">
+          {/* DESKTOP NAV */}
+          <nav>
+            <ul className="flex items-center gap-[72px] font-heading font-medium xl:text-xl">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.url}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* DESKTOP CTA */}
+          <Link href={'#contact'} className="hidden lg:block">
+            <Button label="Get in touch" size={'small'} />
+          </Link>
+        </div>
       </div>
     </div>
   );
