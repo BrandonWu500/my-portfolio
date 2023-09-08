@@ -30,11 +30,13 @@ const About = (props: Props) => {
             ))}
           </ul>
         </div>
-        <Button
-          svgIcon={arrowDownTray}
-          label="Download Resume"
-          className="w-full justify-center"
-        />
+        <a href={'/Resume-Brandon-Wu.pdf'} download className="w-full">
+          <Button
+            svgIcon={arrowDownTray}
+            label="Download Resume"
+            className="w-full justify-center"
+          />
+        </a>
       </div>
     </div>
   );
