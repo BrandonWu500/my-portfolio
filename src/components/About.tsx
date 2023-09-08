@@ -14,7 +14,7 @@ const About = (props: Props) => {
         <h2 className="text-center font-heading text-[32px] font-semibold">
           About Me
         </h2>
-        <div className="flex max-w-[315px] flex-col gap-5">
+        <div className="flex flex-col gap-5">
           <p className="font-heading text-xl font-medium">
             Hi, my name is Brandon!
           </p>
@@ -30,7 +30,13 @@ const About = (props: Props) => {
             ))}
           </ul>
         </div>
-        <Button svgIcon={arrowDownTray} label="Download Resume" />
+        <a href={'/Resume-Brandon-Wu.pdf'} download className="w-full">
+          <Button
+            svgIcon={arrowDownTray}
+            label="Download Resume"
+            className="w-full justify-center"
+          />
+        </a>
       </div>
     </div>
   );
