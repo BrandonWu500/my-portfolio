@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { navLinks } from '@/constants/data';
+import { navLinks } from '../../../constants/data';
 
 import Button from '../button/Button';
 
