@@ -45,6 +45,7 @@ const Header = (props: Props) => {
           className={
             'fixed left-0 top-0 z-40 mt-24 h-screen w-full bg-neutral-900/80'
           }
+          onClick={() => setIsOpen(false)}
         ></div>
       )}
 
