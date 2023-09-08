@@ -1,6 +1,7 @@
 import Button from '@/components/ui/button/Button';
 import { experience } from '@/constants/data';
 
+import SectionTitle from '@/components/SectionTitle';
 import arrowDownTray from '/public/arrow-down-tray.svg';
 
 type Props = {};
@@ -10,9 +11,7 @@ const About = (props: Props) => {
       id="about"
       className="w-screen bg-neutral-900 px-8 py-4 text-neutral-50"
     >
-      <h2 className="mb-8 text-center font-heading text-[32px] font-semibold xl:my-16">
-        About Me
-      </h2>
+      <SectionTitle title="About Me" />
       <div className="mx-auto flex max-w-[330px] flex-col items-center gap-8 xl:grid xl:max-w-[1000px] xl:grid-cols-2 xl:justify-center">
         <div className="flex flex-col gap-5 xl:gap-8">
           <p className="font-heading text-xl font-medium xl:text-4xl">
