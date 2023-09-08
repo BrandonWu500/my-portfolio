@@ -39,6 +39,15 @@ const Header = (props: Props) => {
         )}
       </button>
 
+      {/* MOBILE NAV OVERLAY */}
+      {isOpen && (
+        <div
+          className={
+            'fixed left-0 top-0 z-40 mt-24 h-screen w-full bg-neutral-900/80'
+          }
+        ></div>
+      )}
+
       {/* MOBILE NAV */}
       <div
         className={twMerge(
