@@ -4,6 +4,7 @@ import { Besley, Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import Button from '../button/Button';
 
@@ -37,27 +38,30 @@ const Header = (props: Props) => {
       </button>
 
       {/* MOBILE NAV */}
-      {isOpen && (
-        <div className="fixed left-0 top-0 z-50 mt-24 h-screen bg-neutral-900">
-          <ul className="flex w-[250px] flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
-            <li>
-              <Link href={'#hero'}>Home</Link>
-            </li>
-            <li>
-              <Link href={'#about'}>About</Link>
-            </li>
-            <li>
-              <Link href={'#skills'}>Skills</Link>
-            </li>
-            <li>
-              <Link href={'#projects'}>Projects</Link>
-            </li>
-            <li>
-              <Link href={'#contact'}>Contact</Link>
-            </li>
-          </ul>
-        </div>
-      )}
+      <div
+        className={twMerge(
+          'fixed -left-[250px] top-0 z-50 mt-24 h-screen w-[250px] bg-neutral-900 transition-transform duration-500 ease-in-out',
+          isOpen && 'translate-x-[250px]'
+        )}
+      >
+        <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
+          <li>
+            <Link href={'#hero'}>Home</Link>
+          </li>
+          <li>
+            <Link href={'#about'}>About</Link>
+          </li>
+          <li>
+            <Link href={'#skills'}>Skills</Link>
+          </li>
+          <li>
+            <Link href={'#projects'}>Projects</Link>
+          </li>
+          <li>
+            <Link href={'#contact'}>Contact</Link>
+          </li>
+        </ul>
+      </div>
 
       <div className="hidden items-center gap-[72px] lg:flex">
         {/* DESKTOP NAV */}
