@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Skill from './Skill';
 import storybookIcon from '/public/devicon_storybook.svg';
-import nextjsIcon from '/public/teenyicons_nextjs-solid.svg';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -36,8 +35,8 @@ export const Small: Story = {
 
 export const Large: Story = {
   args: {
-    svgIcon: nextjsIcon,
-    label: 'Next.js',
+    svgIcon: storybookIcon,
+    label: 'Storybook',
     size: 'large',
   },
 };
@@ -52,8 +51,8 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    svgIcon: nextjsIcon,
-    label: 'Next.js',
+    svgIcon: storybookIcon,
+    label: 'Storybook',
     intent: 'secondary',
   },
 };
