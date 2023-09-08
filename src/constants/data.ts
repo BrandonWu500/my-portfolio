@@ -63,3 +63,10 @@ export const navLinks = [
     label: 'Contact',
   },
 ];
+
+export const experience = [
+  '1 year of experience with web development (using Next.js)',
+  '1 year of experience with web design (using Figma)',
+  '1 year of experience with Git and GitHub',
+  '1 year of experience with CI/CD (using GitHub Actions and Vercel)',
+];
