@@ -40,3 +40,26 @@ export const heroSocialLinks = [
     icon: mailIcon,
   },
 ];
+
+export const navLinks = [
+  {
+    url: '#hero',
+    label: 'Home',
+  },
+  {
+    url: '#about',
+    label: 'About',
+  },
+  {
+    url: '#skills',
+    label: 'Skills',
+  },
+  {
+    url: '#projects',
+    label: 'Projects',
+  },
+  {
+    url: '#contact',
+    label: 'Contact',
+  },
+];

@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
+import { navLinks } from '@/constants/data';
+
 import Button from '../button/Button';
 
 import mobileNavIcon from '/public/bars-3.svg';
@@ -45,21 +47,11 @@ const Header = (props: Props) => {
         )}
       >
         <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
-          <li>
-            <Link href={'#hero'}>Home</Link>
-          </li>
-          <li>
-            <Link href={'#about'}>About</Link>
-          </li>
-          <li>
-            <Link href={'#skills'}>Skills</Link>
-          </li>
-          <li>
-            <Link href={'#projects'}>Projects</Link>
-          </li>
-          <li>
-            <Link href={'#contact'}>Contact</Link>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.label}>
+              <Link href={link.url}>{link.label}</Link>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -67,21 +59,11 @@ const Header = (props: Props) => {
         {/* DESKTOP NAV */}
         <nav>
           <ul className="flex items-center gap-[72px] font-heading font-semibold xl:text-2xl">
-            <li>
-              <Link href={'#hero'}>Home</Link>
-            </li>
-            <li>
-              <Link href={'#about'}>About</Link>
-            </li>
-            <li>
-              <Link href={'#skills'}>Skills</Link>
-            </li>
-            <li>
-              <Link href={'#projects'}>Projects</Link>
-            </li>
-            <li>
-              <Link href={'#contact'}>Contact</Link>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <Link href={link.url}>{link.label}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
