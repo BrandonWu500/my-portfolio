@@ -26,7 +26,7 @@ const Header = (props: Props) => {
     <div
       className={`${besley.variable} ${inter.variable} sticky top-0 z-50 flex h-24 w-screen items-center justify-between bg-neutral-900 p-8 text-neutral-50`}
     >
-      <Link href={'/'}>
+      <Link href={'/'} onClick={() => setIsOpen(false)}>
         <Image src={mobileLogo} alt="logo" className="lg:hidden" />
         <Image src={desktopLogo} alt="logo" className="hidden lg:block" />
       </Link>
@@ -48,7 +48,7 @@ const Header = (props: Props) => {
       >
         <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
           {navLinks.map((link) => (
-            <li key={link.label}>
+            <li key={link.label} onClick={() => setIsOpen(false)}>
               <Link href={link.url}>{link.label}</Link>
             </li>
           ))}
