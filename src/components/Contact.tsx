@@ -44,31 +44,34 @@ const Contact = (props: Props) => {
         </div>
       </div>
 
-      <footer className="mt-16 flex w-full flex-col items-center gap-8 bg-neutral-700 p-2 pb-5">
-        <Link href={'/'}>
-          <Button
-            label="Back to Top"
-            svgIcon={arrowUpCircle}
-            intent={'secondary'}
-            className="flex-row-reverse"
-          />
-        </Link>
-        <div className="flex items-center gap-12 lg:gap-[72px]">
-          {Object.values(mySocialLinks)
-            .filter((link) => link.label !== 'mail icon')
-            .map((link) => (
-              <Link
-                key={link.url}
-                href={link.url}
-                className="relative h-[32px] w-[32px] lg:h-[36px] lg:w-[36px] xl:h-[48px] xl:w-[48px]"
-              >
-                <Image src={link.icon} alt={link.label} fill />
-              </Link>
-            ))}
+      <footer className="mt-16 bg-neutral-700 p-2 pb-5">
+        <div className="flex w-full flex-col items-center gap-8 xl:container xl:mx-auto xl:grid xl:h-[100px] xl:grid-cols-3 xl:place-items-center xl:px-16">
+          <Link href={'/'} className="xl:order-3">
+            <Button
+              label="Back to Top"
+              svgIcon={arrowUpCircle}
+              intent={'secondary'}
+              className="flex-row-reverse"
+              size={width && width >= BREAKPOINTS.XL ? 'medium' : 'small'}
+            />
+          </Link>
+          <div className="flex items-center gap-12 xl:order-1">
+            {Object.values(mySocialLinks)
+              .filter((link) => link.label !== 'mail icon')
+              .map((link) => (
+                <Link
+                  key={link.url}
+                  href={link.url}
+                  className="relative h-[32px] w-[32px] lg:h-[36px] lg:w-[36px] xl:h-[48px] xl:w-[48px]"
+                >
+                  <Image src={link.icon} alt={link.label} fill />
+                </Link>
+              ))}
+          </div>
+          <p className="font-body text-sm xl:order-2 xl:text-lg">
+            © 2023 Brandon Wu. All rights reserved.
+          </p>
         </div>
-        <p className="font-body text-sm">
-          © 2023 Brandon Wu. All rights reserved.
-        </p>
       </footer>
     </div>
   );
