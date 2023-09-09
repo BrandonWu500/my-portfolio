@@ -4,6 +4,7 @@ import carRentalThumbnail from '/public/car-rental-project-thumbnail.png';
 import cypressIcon from '/public/cypress.svg';
 import figmaIcon from '/public/figma-color.svg';
 import githubActionsIcon from '/public/github-actions.svg';
+import githubDarkIcon from '/public/github-dark.svg';
 import githubIcon from '/public/github.svg';
 import jiraIcon from '/public/jira.svg';
 import linkedinIcon from '/public/linkedin.svg';
@@ -120,7 +121,7 @@ export const otherTechMobile = [
     label: 'Jira',
   },
   {
-    svgIcon: githubIcon,
+    svgIcon: githubDarkIcon,
     label: 'GitHub',
   },
   {
