@@ -49,7 +49,7 @@ const Skill = ({
   return (
     <div className={skillStyles({ size, intent })}>
       <Image src={svgIcon} alt="skill icon" width={svgSize} height={svgSize} />
-      <p className="font-medium">{label}</p>
+      <p className="">{label}</p>
     </div>
   );
 };
