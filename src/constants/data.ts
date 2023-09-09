@@ -1,12 +1,20 @@
 import { ProjectType } from '@/types';
 
 import carRentalThumbnail from '/public/car-rental-project-thumbnail.png';
+import cypressIcon from '/public/cypress.svg';
 import figmaIcon from '/public/figma-color.svg';
+import githubActionsIcon from '/public/github-actions.svg';
 import githubIcon from '/public/github.svg';
+import jiraIcon from '/public/jira.svg';
 import linkedinIcon from '/public/linkedin.svg';
 import mailIcon from '/public/mail.svg';
+import mongodbIcon from '/public/mongodb.svg';
 import nextjsIcon from '/public/nextjs.svg';
+import prismaIcon from '/public/prisma.svg';
+import reactIcon from '/public/react.svg';
+import storybookIcon from '/public/storybook.svg';
 import tailwindIcon from '/public/tailwind.svg';
+import testingLibraryIcon from '/public/testing-library.svg';
 import typescriptIcon from '/public/typescript.svg';
 
 export const projects: ProjectType[] = [
@@ -91,5 +99,44 @@ export const favoriteTech = [
   {
     svgIcon: figmaIcon,
     label: 'Figma',
+  },
+];
+
+export const otherTechMobile = [
+  {
+    svgIcon: storybookIcon,
+    label: 'Storybook',
+  },
+  {
+    svgIcon: cypressIcon,
+    label: 'Cypress',
+  },
+  {
+    svgIcon: testingLibraryIcon,
+    label: 'Testing Library',
+  },
+  {
+    svgIcon: jiraIcon,
+    label: 'Jira',
+  },
+  {
+    svgIcon: githubIcon,
+    label: 'GitHub',
+  },
+  {
+    svgIcon: githubActionsIcon,
+    label: 'CI/CD',
+  },
+  {
+    svgIcon: reactIcon,
+    label: 'React',
+  },
+  {
+    svgIcon: mongodbIcon,
+    label: 'MongoDB',
+  },
+  {
+    svgIcon: prismaIcon,
+    label: 'Prisma',
   },
 ];
