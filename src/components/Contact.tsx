@@ -17,14 +17,18 @@ const Contact = (props: Props) => {
   const { width } = useWindowDimensions();
 
   const svgSize = useMemo(() => {
-    return width && width >= BREAKPOINTS.LG ? 48 : 16;
+    return width && width >= BREAKPOINTS.XL
+      ? 48
+      : width && width >= BREAKPOINTS.LG
+      ? 32
+      : 16;
   }, [width]);
 
   return (
     <div id="contact" className="w-screen bg-neutral-900 pt-4 text-neutral-50">
       <SectionTitle title="Contact Me" />
-      <div className="mx-auto flex max-w-[250px] flex-col items-center gap-8 font-body xl:mb-48 xl:max-w-none xl:gap-16">
-        <p className="font-medium xl:text-3xl">
+      <div className="mx-auto flex max-w-[250px] flex-col items-center gap-8 font-body lg:mb-24 lg:max-w-none xl:mb-48 xl:gap-16">
+        <p className="font-medium lg:text-lg xl:text-3xl">
           The best way to reach me is to send me an email.
         </p>
         <div className="flex items-center gap-3 xl:gap-6">
@@ -34,7 +38,9 @@ const Contact = (props: Props) => {
             width={svgSize}
             height={svgSize}
           />
-          <p className="font-semibold xl:text-4xl">brandonwu500@gmail.com</p>
+          <p className="font-semibold lg:text-xl xl:text-4xl">
+            brandonwu500@gmail.com
+          </p>
         </div>
       </div>
 
