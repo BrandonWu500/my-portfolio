@@ -10,8 +10,8 @@ const skillStyles = cva(
   {
     variants: {
       intent: {
-        primary: 'bg-neutral-700 text-neutral-50',
-        secondary: 'bg-neutral-200 text-neutral-900',
+        primary: 'text-neutral-50',
+        secondary: 'text-neutral-900',
       },
       size: {
         small: 'text-xs',
