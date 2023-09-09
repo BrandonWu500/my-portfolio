@@ -18,7 +18,7 @@ const Skills = (props: Props) => {
         <h4 className="mb-4 font-heading text-lg font-medium xl:mb-8 xl:font-body xl:text-2xl xl:uppercase xl:tracking-[6px]">
           My Favorite Tech
         </h4>
-        <div className="mx-auto grid max-w-[250px] grid-cols-2 place-items-center gap-y-4 xl:flex xl:max-w-none xl:justify-center xl:gap-16">
+        <div className="mx-auto grid max-w-[250px] grid-cols-2 place-items-center gap-y-4 lg:flex lg:max-w-none lg:justify-center lg:gap-16">
           {favoriteTech.map((tech) => (
             <Skill
               svgIcon={tech.svgIcon}
