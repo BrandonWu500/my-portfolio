@@ -1,9 +1,13 @@
 import { ProjectType } from '@/types';
 
 import carRentalThumbnail from '/public/car-rental-project-thumbnail.png';
+import figmaIcon from '/public/figma-color.svg';
 import githubIcon from '/public/github.svg';
 import linkedinIcon from '/public/linkedin.svg';
 import mailIcon from '/public/mail.svg';
+import nextjsIcon from '/public/nextjs.svg';
+import tailwindIcon from '/public/tailwind.svg';
+import typescriptIcon from '/public/typescript.svg';
 
 export const projects: ProjectType[] = [
   {
@@ -69,4 +73,23 @@ export const experience = [
   '1 year of experience with web design (using Figma)',
   '1 year of experience with Git and GitHub',
   '1 year of experience with CI/CD (using GitHub Actions and Vercel)',
+];
+
+export const favoriteTech = [
+  {
+    svgIcon: nextjsIcon,
+    label: 'Next.js',
+  },
+  {
+    svgIcon: typescriptIcon,
+    label: 'TypeScript',
+  },
+  {
+    svgIcon: tailwindIcon,
+    label: 'Tailwind',
+  },
+  {
+    svgIcon: figmaIcon,
+    label: 'Figma',
+  },
 ];
