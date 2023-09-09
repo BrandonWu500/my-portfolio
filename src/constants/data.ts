@@ -40,20 +40,23 @@ export const projects: ProjectType[] = [
   },
 ];
 
-export const heroSocialLinks = [
-  {
+export const mySocialLinks = {
+  github: {
     url: 'https://github.com/BrandonWu500',
     icon: githubIcon,
+    label: 'GitHub icon',
   },
-  {
+  linkedin: {
     url: 'https://www.linkedin.com/in/brandonwu500',
     icon: linkedinIcon,
+    label: 'LinkedIn icon',
   },
-  {
+  email: {
     url: '#contact',
     icon: mailIcon,
+    label: 'mail icon',
   },
-];
+};
 
 export const navLinks = [
   {
