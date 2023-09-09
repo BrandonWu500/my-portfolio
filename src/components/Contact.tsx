@@ -1,23 +1,40 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useMemo } from 'react';
 
 import SectionTitle from '@/components/SectionTitle';
 import Button from '@/components/ui/button/Button';
+import { BREAKPOINTS } from '@/constants/breakpoints';
 import { mySocialLinks } from '@/constants/data';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
+
 import arrowUpCircle from '/public/arrow-up-circle.svg';
 
 type Props = {};
 const Contact = (props: Props) => {
+  const { width } = useWindowDimensions();
+
+  const svgSize = useMemo(() => {
+    return width && width >= BREAKPOINTS.LG ? 48 : 16;
+  }, [width]);
+
   return (
     <div id="contact" className="w-screen bg-neutral-900 pt-4 text-neutral-50">
       <SectionTitle title="Contact Me" />
-      <div className="mx-auto flex max-w-[250px] flex-col items-center gap-8 font-body">
-        <p className="font-medium">
+      <div className="mx-auto flex max-w-[250px] flex-col items-center gap-8 font-body xl:mb-48 xl:max-w-none xl:gap-16">
+        <p className="font-medium xl:text-3xl">
           The best way to reach me is to send me an email.
         </p>
-        <div className="flex items-center gap-3">
-          <Image src={mySocialLinks.email.icon} alt="mail icon" />
-          <p className="font-semibold">brandonwu500@gmail.com</p>
+        <div className="flex items-center gap-3 xl:gap-6">
+          <Image
+            src={mySocialLinks.email.icon}
+            alt="mail icon"
+            width={svgSize}
+            height={svgSize}
+          />
+          <p className="font-semibold xl:text-4xl">brandonwu500@gmail.com</p>
         </div>
       </div>
 
