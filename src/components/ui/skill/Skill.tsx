@@ -10,12 +10,13 @@ const skillStyles = cva(
   {
     variants: {
       intent: {
-        primary: 'bg-neutral-700 text-neutral-50',
-        secondary: 'bg-neutral-200 text-neutral-900',
+        primary: 'text-neutral-50',
+        secondary: 'text-neutral-900',
       },
       size: {
         small: 'text-xs',
-        large: '',
+        medium: '',
+        large: 'text-xl gap-4',
       },
     },
   }
@@ -38,8 +39,11 @@ const Skill = ({
       case 'small':
         return 24;
 
-      case 'large':
+      case 'medium':
         return 48;
+
+      case 'large':
+        return 72;
 
       default:
         return 24;

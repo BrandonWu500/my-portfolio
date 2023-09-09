@@ -17,6 +17,7 @@ import storybookIcon from '/public/storybook.svg';
 import tailwindIcon from '/public/tailwind.svg';
 import testingLibraryIcon from '/public/testing-library.svg';
 import typescriptIcon from '/public/typescript.svg';
+import vercelIcon from '/public/vercel.svg';
 
 export const projects: ProjectType[] = [
   {
@@ -127,6 +128,49 @@ export const otherTechMobile = [
   {
     svgIcon: githubActionsIcon,
     label: 'CI/CD',
+  },
+  {
+    svgIcon: reactIcon,
+    label: 'React',
+  },
+  {
+    svgIcon: mongodbIcon,
+    label: 'MongoDB',
+  },
+  {
+    svgIcon: prismaIcon,
+    label: 'Prisma',
+  },
+];
+
+export const otherTechDesktop = [
+  {
+    svgIcon: storybookIcon,
+    label: 'Storybook',
+  },
+  {
+    svgIcon: cypressIcon,
+    label: 'Cypress',
+  },
+  {
+    svgIcon: testingLibraryIcon,
+    label: 'Testing Library',
+  },
+  {
+    svgIcon: jiraIcon,
+    label: 'Jira',
+  },
+  {
+    svgIcon: githubDarkIcon,
+    label: 'GitHub',
+  },
+  {
+    svgIcon: githubActionsIcon,
+    label: 'GitHub Actions',
+  },
+  {
+    svgIcon: vercelIcon,
+    label: 'Vercel',
   },
   {
     svgIcon: reactIcon,
