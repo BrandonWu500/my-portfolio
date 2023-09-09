@@ -44,7 +44,7 @@ const Hero = (props: Props) => {
             href={link.url}
             className="relative h-[32px] w-[32px] lg:h-[36px] lg:w-[36px] xl:h-[48px] xl:w-[48px]"
           >
-            <Image src={link.icon} alt="github icon" fill />
+            <Image src={link.icon} alt={link.label} fill />
           </Link>
         ))}
       </div>
