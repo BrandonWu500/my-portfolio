@@ -12,7 +12,7 @@ const Skills = (props: Props) => {
         <h4 className="mb-4 font-heading text-lg font-medium">
           My Favorite Tech
         </h4>
-        <div className="grid grid-cols-2 gap-y-4">
+        <div className="mx-auto grid max-w-[250px] grid-cols-2 gap-y-4">
           {favoriteTech.map((tech) => (
             <Skill
               svgIcon={tech.svgIcon}
@@ -28,7 +28,7 @@ const Skills = (props: Props) => {
         <h4 className="mb-4 font-heading text-lg font-semibold">
           Other Tech I Use
         </h4>
-        <div className="grid grid-cols-3 gap-y-4">
+        <div className="mx-auto grid max-w-xs grid-cols-3 gap-y-4">
           {otherTechMobile.map((tech) => (
             <Skill
               svgIcon={tech.svgIcon}
