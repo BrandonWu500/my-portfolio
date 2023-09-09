@@ -7,7 +7,7 @@ import Button from '@/components/ui/button/Button';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 import { BREAKPOINTS } from '@/constants/breakpoints';
-import { heroSocialLinks } from '@/constants/data';
+import { mySocialLinks } from '@/constants/data';
 import headshot from '/public/my-portrait.jpg';
 
 type Props = {};
@@ -38,7 +38,7 @@ const Hero = (props: Props) => {
         </h3>
       </div>
       <div className="flex items-center gap-12 lg:gap-[72px]">
-        {heroSocialLinks.map((link) => (
+        {Object.values(mySocialLinks).map((link) => (
           <Link
             key={link.url}
             href={link.url}
