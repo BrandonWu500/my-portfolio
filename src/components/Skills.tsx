@@ -1,9 +1,15 @@
+'use client';
+
 import SectionTitle from '@/components/SectionTitle';
 import Skill from '@/components/ui/skill/Skill';
+import { BREAKPOINTS } from '@/constants/breakpoints';
 import { favoriteTech, otherTechMobile } from '@/constants/data';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 type Props = {};
 const Skills = (props: Props) => {
+  const { width } = useWindowDimensions();
+
   return (
     <div id="skills" className="w-screen bg-neutral-900 pt-8 text-neutral-50">
       <SectionTitle title="Skills" />
@@ -12,13 +18,13 @@ const Skills = (props: Props) => {
         <h4 className="mb-4 font-heading text-lg font-medium xl:mb-8 xl:font-body xl:text-2xl xl:uppercase xl:tracking-[6px]">
           My Favorite Tech
         </h4>
-        <div className="mx-auto grid max-w-[250px] grid-cols-2 place-items-center gap-y-4 xl:flex xl:justify-center xl:gap-16">
+        <div className="mx-auto grid max-w-[250px] grid-cols-2 place-items-center gap-y-4 xl:flex xl:max-w-none xl:justify-center xl:gap-16">
           {favoriteTech.map((tech) => (
             <Skill
               svgIcon={tech.svgIcon}
               label={tech.label}
               key={tech.label}
-              size={'large'}
+              size={width && width >= BREAKPOINTS.XL ? 'large' : 'medium'}
             />
           ))}
         </div>
