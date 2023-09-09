@@ -44,9 +44,9 @@ const Contact = (props: Props) => {
         </div>
       </div>
 
-      <footer className="mt-16 bg-neutral-700 p-2 pb-5">
-        <div className="flex w-full flex-col items-center gap-8 xl:container xl:mx-auto xl:grid xl:h-[100px] xl:grid-cols-3 xl:place-items-center xl:px-16">
-          <Link href={'/'} className="xl:order-3">
+      <footer className="mt-16 bg-neutral-700 p-2 pb-5 lg:pb-2">
+        <div className="flex w-full flex-col items-center gap-8 lg:container lg:mx-auto lg:grid lg:h-20 lg:grid-cols-3 lg:place-items-center xl:h-[100px] xl:px-16">
+          <Link href={'/'} className="lg:order-3">
             <Button
               label="Back to Top"
               svgIcon={arrowUpCircle}
@@ -55,7 +55,7 @@ const Contact = (props: Props) => {
               size={width && width >= BREAKPOINTS.XL ? 'medium' : 'small'}
             />
           </Link>
-          <div className="flex items-center gap-12 xl:order-1">
+          <div className="flex items-center gap-12 lg:order-1">
             {Object.values(mySocialLinks)
               .filter((link) => link.label !== 'mail icon')
               .map((link) => (
@@ -68,7 +68,7 @@ const Contact = (props: Props) => {
                 </Link>
               ))}
           </div>
-          <p className="font-body text-sm xl:order-2 xl:text-lg">
+          <p className="font-body text-sm lg:order-2 xl:text-lg">
             © 2023 Brandon Wu. All rights reserved.
           </p>
         </div>
