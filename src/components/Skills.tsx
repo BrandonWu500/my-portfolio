@@ -8,11 +8,11 @@ const Skills = (props: Props) => {
     <div id="skills" className="w-screen bg-neutral-900 pt-8 text-neutral-50">
       <SectionTitle title="Skills" />
 
-      <div className="w-full bg-neutral-700 p-5 text-center">
-        <h4 className="mb-4 font-heading text-lg font-medium">
+      <div className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:mb-16 xl:max-w-4xl xl:border xl:border-neutral-700 xl:bg-transparent xl:p-8">
+        <h4 className="mb-4 font-heading text-lg font-medium xl:mb-8 xl:font-body xl:text-2xl xl:uppercase xl:tracking-[6px]">
           My Favorite Tech
         </h4>
-        <div className="mx-auto grid max-w-[250px] grid-cols-2 place-items-center gap-y-4">
+        <div className="mx-auto grid max-w-[250px] grid-cols-2 place-items-center gap-y-4 xl:flex xl:justify-center xl:gap-16">
           {favoriteTech.map((tech) => (
             <Skill
               svgIcon={tech.svgIcon}
