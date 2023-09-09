@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Skill from './Skill';
-import storybookIcon from '/public/devicon_storybook.svg';
+import storybookIcon from '/public/storybook.svg';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
