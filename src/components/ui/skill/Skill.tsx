@@ -15,7 +15,8 @@ const skillStyles = cva(
       },
       size: {
         small: 'text-xs',
-        large: '',
+        medium: '',
+        large: 'text-xl gap-4',
       },
     },
   }
@@ -38,8 +39,11 @@ const Skill = ({
       case 'small':
         return 24;
 
-      case 'large':
+      case 'medium':
         return 48;
+
+      case 'large':
+        return 72;
 
       default:
         return 24;
