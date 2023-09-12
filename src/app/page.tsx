@@ -7,7 +7,7 @@ import Skills from '@/components/Skills';
 type Props = {};
 const HomePage = (props: Props) => {
   return (
-    <div>
+    <div className="h-screen overflow-y-auto overflow-x-hidden pt-24 xl:scrollbar xl:scrollbar-track-neutral-900/80 xl:scrollbar-thumb-neutral-50/30">
       <Hero />
       <About />
       <Skills />

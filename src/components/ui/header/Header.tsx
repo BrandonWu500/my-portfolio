@@ -23,7 +23,7 @@ const Header = (props: Props) => {
 
   return (
     <div
-      className={`${besley.variable} ${inter.variable} sticky top-0 z-50 w-full bg-neutral-900 text-neutral-50`}
+      className={`${besley.variable} ${inter.variable} fixed top-0 z-50 w-full bg-neutral-900 text-neutral-50`}
     >
       <div className="container mx-auto flex h-24 items-center justify-between p-8 xl:justify-evenly xl:pl-16">
         <Link href={'/'} onClick={() => setIsOpen(false)}>
