@@ -1,4 +1,5 @@
 import { VariantProps, cva } from 'cva';
+import { motion } from 'framer-motion';
 import { Besley, Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -62,7 +63,19 @@ const ProjectCard = ({
   }, [size]);
 
   return (
-    <div className={projectCardStyles({ size })}>
+    <motion.div
+      initial={{
+        scale: 0.5,
+        opacity: 0,
+      }}
+      whileInView={{
+        scale: 1,
+        opacity: 1,
+      }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
+      className={projectCardStyles({ size })}
+    >
       <Image
         src={imgUrl}
         alt="project thumbnail"
@@ -118,7 +131,7 @@ const ProjectCard = ({
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default ProjectCard;
