@@ -17,7 +17,7 @@ const Hero = (props: Props) => {
   return (
     <div
       id="hero"
-      className="heroBg flex w-full flex-col items-center gap-12 px-12 py-7 pb-12 text-neutral-50 xl:gap-[72px]"
+      className="heroBg flex w-full snap-center flex-col items-center gap-12 py-7 pb-12 text-neutral-50 lg:h-screen lg:justify-center lg:pt-24 xl:gap-[72px]"
     >
       <div className="flex flex-col items-center gap-2 lg:gap-4">
         <div className="relative h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] xl:my-4 xl:h-[200px] xl:w-[200px]">

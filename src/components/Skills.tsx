@@ -23,10 +23,13 @@ const Skills = (props: Props) => {
   }, [width]);
 
   return (
-    <div id="skills" className="w-full bg-neutral-900 py-8 text-neutral-50">
+    <div
+      id="skills"
+      className="w-full snap-center bg-neutral-900 py-8 text-neutral-50 lg:flex lg:h-screen lg:flex-col lg:justify-center lg:pt-24"
+    >
       <SectionTitle title="Skills" />
 
-      <div className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:mb-16 xl:max-w-4xl xl:border xl:border-neutral-700 xl:bg-transparent xl:p-8">
+      <div className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:max-w-4xl xl:border xl:border-neutral-700 xl:bg-transparent xl:p-8">
         <h4 className="mb-4 font-heading text-lg font-medium lg:text-xl xl:mb-8 xl:font-body xl:text-2xl xl:uppercase xl:tracking-[6px]">
           My Favorite Tech
         </h4>

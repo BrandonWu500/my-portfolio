@@ -26,7 +26,7 @@ const Header = (props: Props) => {
       className={`${besley.variable} ${inter.variable} fixed top-0 z-50 w-full bg-neutral-900 text-neutral-50`}
     >
       <div className="container mx-auto flex h-24 items-center justify-between p-8 xl:justify-evenly xl:pl-16">
-        <Link href={'/'} onClick={() => setIsOpen(false)}>
+        <Link href={'#hero'} onClick={() => setIsOpen(false)}>
           <Image src={mobileLogo} alt="logo" />
         </Link>
 

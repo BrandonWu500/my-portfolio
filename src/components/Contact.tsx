@@ -25,10 +25,13 @@ const Contact = (props: Props) => {
   }, [width]);
 
   return (
-    <div id="contact" className="w-full bg-neutral-900 pt-4 text-neutral-50">
+    <div
+      id="contact"
+      className="relative w-full snap-center bg-neutral-900 pt-4 text-neutral-50 lg:flex lg:h-screen lg:flex-col lg:justify-center lg:pt-0"
+    >
       <SectionTitle title="Contact Me" />
       <div className="mx-auto flex max-w-[250px] flex-col items-center gap-8 font-body lg:mb-24 lg:max-w-none xl:mb-48 xl:gap-16">
-        <p className="font-medium lg:text-lg xl:text-3xl">
+        <p className="font-medium lg:text-lg xl:mt-8 xl:text-3xl">
           The best way to reach me is to send me an email.
         </p>
         <div className="flex items-center gap-3 xl:gap-6">
@@ -44,9 +47,9 @@ const Contact = (props: Props) => {
         </div>
       </div>
 
-      <footer className="mt-16 bg-neutral-700 p-2 pb-5 lg:pb-2">
+      <footer className="mt-16 w-full bg-neutral-700 p-2 pb-5 lg:absolute lg:bottom-0 lg:pb-2">
         <div className="flex w-full flex-col items-center gap-8 lg:container lg:mx-auto lg:grid lg:h-20 lg:grid-cols-3 lg:place-items-center xl:h-[100px] xl:px-16">
-          <Link href={'/'} className="lg:order-3">
+          <Link href={'#hero'} className="lg:order-3">
             <Button
               label="Back to Top"
               svgIcon={arrowUpCircle}
