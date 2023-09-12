@@ -1,4 +1,5 @@
 import { VariantProps, cva } from 'cva';
+import { motion } from 'framer-motion';
 import { Inter } from 'next/font/google';
 import Image, { StaticImageData } from 'next/image';
 import { useMemo } from 'react';
@@ -25,12 +26,14 @@ const skillStyles = cva(
 type Props = VariantProps<typeof skillStyles> & {
   svgIcon: StaticImageData;
   label: string;
+  animationDirection?: 'left' | 'right';
 };
 const Skill = ({
   size = 'small',
   intent = 'primary',
   svgIcon,
   label,
+  animationDirection = 'left',
 }: Props) => {
   const svgSize = useMemo(() => {
     if (!svgIcon) return;
@@ -51,10 +54,18 @@ const Skill = ({
   }, [size, svgIcon]);
 
   return (
-    <div className={skillStyles({ size, intent })}>
+    <motion.div
+      initial={{
+        x: animationDirection === 'left' ? -100 : 100,
+      }}
+      whileInView={{ x: 0 }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
+      className={skillStyles({ size, intent })}
+    >
       <Image src={svgIcon} alt="skill icon" width={svgSize} height={svgSize} />
       <p className="">{label}</p>
-    </div>
+    </motion.div>
   );
 };
 export default Skill;
