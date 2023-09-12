@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { Besley, Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,7 +26,20 @@ const Header = (props: Props) => {
     <div
       className={`${besley.variable} ${inter.variable} fixed top-0 z-50 w-full bg-neutral-900 text-neutral-50`}
     >
-      <div className="container mx-auto flex h-24 items-center justify-between p-8 xl:justify-evenly xl:pl-16">
+      <motion.div
+        initial={{
+          y: -500,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="container mx-auto flex h-24 items-center justify-between p-8 xl:justify-evenly xl:pl-16"
+      >
         <Link href={'#hero'} onClick={() => setIsOpen(false)}>
           <Image src={mobileLogo} alt="logo" />
         </Link>
@@ -48,22 +62,6 @@ const Header = (props: Props) => {
           ></div>
         )}
 
-        {/* MOBILE NAV */}
-        <div
-          className={twMerge(
-            'fixed -left-[250px] top-0 z-50 mt-24 h-screen w-[250px] bg-neutral-900 transition-transform duration-500 ease-in-out',
-            isOpen && 'translate-x-[250px]'
-          )}
-        >
-          <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
-            {navLinks.map((link) => (
-              <li key={link.label} onClick={() => setIsOpen(false)}>
-                <Link href={link.url}>{link.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         <div className="hidden items-center gap-[72px] lg:flex">
           {/* DESKTOP NAV */}
           <nav>
@@ -81,6 +79,22 @@ const Header = (props: Props) => {
             <Button label="Get in touch" size={'small'} />
           </Link>
         </div>
+      </motion.div>
+
+      {/* MOBILE NAV */}
+      <div
+        className={twMerge(
+          'fixed -left-[250px] top-0 z-50 mt-24 h-screen w-[250px] bg-neutral-900 transition-transform duration-500 ease-in-out lg:hidden',
+          isOpen && 'translate-x-[250px]'
+        )}
+      >
+        <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
+          {navLinks.map((link) => (
+            <li key={link.label} onClick={() => setIsOpen(false)}>
+              <Link href={link.url}>{link.label}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useMemo } from 'react';
 
 import SectionTitle from '@/components/SectionTitle';
@@ -29,7 +30,19 @@ const Skills = (props: Props) => {
     >
       <SectionTitle title="Skills" />
 
-      <div className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:max-w-4xl xl:border xl:border-neutral-700 xl:bg-transparent xl:p-8">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        viewport={{ once: true }}
+        className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:max-w-4xl xl:border xl:border-neutral-700 xl:bg-transparent xl:p-8"
+      >
         <h4 className="mb-4 font-heading text-lg font-medium lg:text-xl xl:mb-8 xl:font-body xl:text-2xl xl:uppercase xl:tracking-[6px]">
           My Favorite Tech
         </h4>
@@ -43,9 +56,21 @@ const Skills = (props: Props) => {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="mx-auto w-full bg-neutral-200 p-5 text-center text-neutral-900 xl:max-w-4xl">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        viewport={{ once: true }}
+        className="mx-auto w-full bg-neutral-200 p-5 text-center text-neutral-900 xl:max-w-4xl"
+      >
         <h4 className="mb-4 font-heading text-lg font-semibold lg:text-xl xl:mb-8">
           Other Tech I Use
         </h4>
@@ -57,10 +82,11 @@ const Skills = (props: Props) => {
               key={tech.label}
               intent={'secondary'}
               size={width && width >= BREAKPOINTS.LG ? 'medium' : 'small'}
+              animationDirection="right"
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

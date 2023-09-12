@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -19,7 +20,20 @@ const Hero = (props: Props) => {
       id="hero"
       className="heroBg flex w-full snap-center flex-col items-center gap-12 py-7 pb-12 text-neutral-50 lg:h-screen lg:justify-center lg:pt-24 xl:gap-[72px]"
     >
-      <div className="flex flex-col items-center gap-2 lg:gap-4">
+      <motion.div
+        initial={{
+          y: -500,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex flex-col items-center gap-2 lg:gap-4"
+      >
         <div className="relative h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] xl:my-4 xl:h-[200px] xl:w-[200px]">
           <Image
             src={headshot}
@@ -36,8 +50,21 @@ const Hero = (props: Props) => {
         <h3 className="font-heading font-semibold text-neutral-100 lg:text-xl xl:text-[32px]">
           {`Web Designer & Web Developer`}
         </h3>
-      </div>
-      <div className="flex items-center gap-12 lg:gap-[72px]">
+      </motion.div>
+      <motion.div
+        initial={{
+          y: 500,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex items-center gap-12 lg:gap-[72px]"
+      >
         {Object.values(mySocialLinks).map((link) => (
           <Link
             key={link.url}
@@ -47,8 +74,21 @@ const Hero = (props: Props) => {
             <Image src={link.icon} alt={link.label} fill />
           </Link>
         ))}
-      </div>
-      <div className="flex w-full items-center justify-center lg:gap-12 xl:gap-[72px]">
+      </motion.div>
+      <motion.div
+        initial={{
+          y: 500,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="flex w-full items-center justify-center lg:gap-12 xl:gap-[72px]"
+      >
         <Link href={'#contact'}>
           {width && width >= BREAKPOINTS.XL ? (
             <Button label="Contact Me" intent={'secondary'} size={'medium'} />
@@ -72,7 +112,7 @@ const Hero = (props: Props) => {
             )
           )}
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };
