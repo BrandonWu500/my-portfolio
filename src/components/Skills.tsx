@@ -23,7 +23,7 @@ const Skills = (props: Props) => {
   }, [width]);
 
   return (
-    <div id="skills" className="w-screen bg-neutral-900 py-8 text-neutral-50">
+    <div id="skills" className="w-full bg-neutral-900 py-8 text-neutral-50">
       <SectionTitle title="Skills" />
 
       <div className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:mb-16 xl:max-w-4xl xl:border xl:border-neutral-700 xl:bg-transparent xl:p-8">

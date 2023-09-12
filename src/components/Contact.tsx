@@ -25,7 +25,7 @@ const Contact = (props: Props) => {
   }, [width]);
 
   return (
-    <div id="contact" className="w-screen bg-neutral-900 pt-4 text-neutral-50">
+    <div id="contact" className="w-full bg-neutral-900 pt-4 text-neutral-50">
       <SectionTitle title="Contact Me" />
       <div className="mx-auto flex max-w-[250px] flex-col items-center gap-8 font-body lg:mb-24 lg:max-w-none xl:mb-48 xl:gap-16">
         <p className="font-medium lg:text-lg xl:text-3xl">

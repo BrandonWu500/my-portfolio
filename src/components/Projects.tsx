@@ -13,7 +13,7 @@ const Projects = (props: Props) => {
   return (
     <div
       id="projects"
-      className="relative z-10 w-screen bg-neutral-900 py-4 text-neutral-50 lg:h-[500px] xl:h-[1024px]"
+      className="relative z-10 w-full bg-neutral-900 py-4 text-neutral-50 lg:h-[500px] xl:h-[1024px]"
     >
       <SectionTitle title="Projects" />
       <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-center lg:gap-[56px] xl:mt-[230px]">
