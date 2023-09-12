@@ -18,11 +18,7 @@ const Contact = (props: Props) => {
   const { width } = useWindowDimensions();
 
   const svgSize = useMemo(() => {
-    return width && width >= BREAKPOINTS.XL
-      ? 48
-      : width && width >= BREAKPOINTS.LG
-      ? 32
-      : 16;
+    return width && width >= BREAKPOINTS.XL ? 48 : 32;
   }, [width]);
 
   return (
@@ -42,9 +38,9 @@ const Contact = (props: Props) => {
           duration: 2,
         }}
         viewport={{ once: true }}
-        className="mx-auto flex max-w-[250px] flex-col items-center gap-8 font-body lg:mb-24 lg:max-w-none xl:mb-48 xl:gap-16"
+        className="mx-auto flex max-w-[270px] flex-col items-center gap-8 font-body lg:mb-24 lg:max-w-none xl:mb-48 xl:gap-16"
       >
-        <p className="font-medium lg:text-lg xl:mt-8 xl:text-3xl">
+        <p className="text-lg font-medium xl:mt-8 xl:text-3xl">
           The best way to reach me is to send me an email.
         </p>
         <div className="flex items-center gap-3 xl:gap-6">
@@ -53,8 +49,9 @@ const Contact = (props: Props) => {
             alt="mail icon"
             width={svgSize}
             height={svgSize}
+            className="hidden lg:block"
           />
-          <p className="font-semibold lg:text-xl xl:text-4xl">
+          <p className="text-xl font-semibold xl:text-4xl">
             brandonwu500@gmail.com
           </p>
         </div>
