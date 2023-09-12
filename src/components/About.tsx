@@ -7,9 +7,12 @@ import arrowDownTray from '/public/arrow-down-tray.svg';
 type Props = {};
 const About = (props: Props) => {
   return (
-    <div id="about" className="w-full bg-neutral-900 px-8 py-4 text-neutral-50">
+    <div
+      id="about"
+      className="relative w-full snap-center bg-neutral-900 px-8 py-4 text-neutral-50 lg:flex lg:h-screen lg:flex-col lg:justify-center lg:pt-24 xl:pt-0"
+    >
       <SectionTitle title="About Me" />
-      <div className="mx-auto flex max-w-[330px] flex-col items-center gap-8 lg:max-w-md xl:grid xl:max-w-[1000px] xl:grid-cols-2 xl:justify-center">
+      <div className="mx-auto flex max-w-[330px] flex-col items-center gap-8 lg:max-w-md xl:mt-12 xl:grid xl:max-w-[1000px] xl:grid-cols-2 xl:justify-center">
         <div className="flex flex-col gap-5 xl:gap-8">
           <p className="font-heading text-xl font-medium xl:text-4xl">
             Hi, my name is Brandon!
