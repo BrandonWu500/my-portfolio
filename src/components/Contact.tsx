@@ -49,7 +49,7 @@ const Contact = (props: Props) => {
 
       <footer className="mt-16 w-full bg-neutral-700 p-2 pb-5 lg:absolute lg:bottom-0 lg:pb-2">
         <div className="flex w-full flex-col items-center gap-8 lg:container lg:mx-auto lg:grid lg:h-20 lg:grid-cols-3 lg:place-items-center xl:h-[100px] xl:px-16">
-          <Link href={'/'} className="lg:order-3">
+          <Link href={'#hero'} className="lg:order-3">
             <Button
               label="Back to Top"
               svgIcon={arrowUpCircle}
