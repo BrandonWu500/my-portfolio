@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import ScrollDownIndicator from '@/components/ScrollDownIndicator';
 import Button from '@/components/ui/button/Button';
-import useWindowDimensions from '@/hooks/useWindowDimensions';
-
 import { BREAKPOINTS } from '@/constants/breakpoints';
 import { mySocialLinks } from '@/constants/data';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
+
 import headshot from '/public/my-portrait.jpg';
 
 type Props = {
@@ -27,7 +28,7 @@ const Hero = ({ scrollToRef }: Props) => {
   return (
     <div
       id="hero"
-      className="heroBg flex w-full snap-center flex-col items-center gap-12 py-7 pb-12 text-neutral-50 lg:h-screen lg:justify-center lg:pt-24 xl:gap-[72px]"
+      className="heroBg relative flex w-full snap-center flex-col items-center gap-12 py-7 pb-12 text-neutral-50 lg:h-screen lg:justify-center lg:pt-24 xl:gap-[72px]"
     >
       <motion.div
         initial={{
@@ -125,6 +126,7 @@ const Hero = ({ scrollToRef }: Props) => {
           )
         )}
       </motion.div>
+      <ScrollDownIndicator />
     </div>
   );
 };
