@@ -11,9 +11,18 @@ import { BREAKPOINTS } from '@/constants/breakpoints';
 import { mySocialLinks } from '@/constants/data';
 import headshot from '/public/my-portrait.jpg';
 
-type Props = {};
-const Hero = (props: Props) => {
+type Props = {
+  scrollToRef: React.RefObject<HTMLDivElement>;
+};
+const Hero = ({ scrollToRef }: Props) => {
   const { width } = useWindowDimensions();
+
+  const handleScrollTo = () => {
+    scrollToRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
 
   return (
     <div
@@ -98,20 +107,23 @@ const Hero = (props: Props) => {
             <Button label="Contact Me" className="bg-transparent" />
           )}
         </Link>
-        <Link href={'#about'}>
-          {width && width >= BREAKPOINTS.XL ? (
+        {width && width >= BREAKPOINTS.XL ? (
+          <Button
+            label="Learn More"
+            className="bg-transparent"
+            size={'medium'}
+            onClick={() => handleScrollTo()}
+          />
+        ) : (
+          width &&
+          width >= BREAKPOINTS.LG && (
             <Button
               label="Learn More"
               className="bg-transparent"
-              size={'medium'}
+              onClick={() => handleScrollTo()}
             />
-          ) : (
-            width &&
-            width >= BREAKPOINTS.LG && (
-              <Button label="Learn More" className="bg-transparent" />
-            )
-          )}
-        </Link>
+          )
+        )}
       </motion.div>
     </div>
   );
