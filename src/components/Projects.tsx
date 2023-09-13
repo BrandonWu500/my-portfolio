@@ -1,5 +1,6 @@
 'use client';
 
+import ScrollDownIndicator from '@/components/ScrollDownIndicator';
 import SectionTitle from '@/components/SectionTitle';
 import ProjectCard from '@/components/ui/card/ProjectCard';
 import { BREAKPOINTS } from '@/constants/breakpoints';
@@ -28,6 +29,8 @@ const Projects = (props: Props) => {
 
       {/* BACKGROUND DECORATION */}
       <div className="absolute left-0 right-0 top-[35%] -z-10 mx-auto hidden h-[150px] w-full -skew-y-[8deg] bg-neutral-800 lg:top-[45%] lg:block xl:top-[25%] xl:h-[540px]" />
+
+      <ScrollDownIndicator />
     </div>
   );
 };

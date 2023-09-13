@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useMemo } from 'react';
 
+import ScrollDownIndicator from '@/components/ScrollDownIndicator';
 import SectionTitle from '@/components/SectionTitle';
 import Skill from '@/components/ui/skill/Skill';
 import { BREAKPOINTS } from '@/constants/breakpoints';
@@ -26,7 +27,7 @@ const Skills = (props: Props) => {
   return (
     <div
       id="skills"
-      className="w-full snap-center bg-neutral-900 py-8 text-neutral-50 lg:flex lg:h-screen lg:flex-col lg:justify-center lg:pt-24"
+      className="relative w-full snap-center bg-neutral-900 py-8 text-neutral-50 lg:flex lg:h-screen lg:flex-col lg:justify-center lg:pt-24"
     >
       <SectionTitle title="Skills" />
 
@@ -87,6 +88,7 @@ const Skills = (props: Props) => {
           ))}
         </div>
       </motion.div>
+      <ScrollDownIndicator />
     </div>
   );
 };
