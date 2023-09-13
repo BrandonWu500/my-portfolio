@@ -27,6 +27,7 @@ type Props = VariantProps<typeof buttonStyles> & {
   label: string;
   svgIcon?: any;
   className?: string;
+  onClick?: React.MouseEventHandler;
 };
 const Button = ({
   intent = 'primary',
@@ -34,6 +35,7 @@ const Button = ({
   label,
   svgIcon,
   className,
+  onClick,
 }: Props) => {
   const svgSize = useMemo(() => {
     if (!svgIcon) return;
@@ -54,7 +56,10 @@ const Button = ({
   }, [size, svgIcon]);
 
   return (
-    <button className={twMerge(buttonStyles({ intent, size }), className)}>
+    <button
+      className={twMerge(buttonStyles({ intent, size }), className)}
+      onClick={onClick}
+    >
       {label}
       {svgIcon && (
         <Image src={svgIcon} alt="icon" width={svgSize} height={svgSize} />
