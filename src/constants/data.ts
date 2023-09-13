@@ -10,6 +10,7 @@ import jiraIcon from '/public/jira.svg';
 import linkedinIcon from '/public/linkedin.svg';
 import mailIcon from '/public/mail.svg';
 import mongodbIcon from '/public/mongodb.svg';
+import myPortfolioThumbnail from '/public/my-portfolio-thumbnail.png';
 import nextjsIcon from '/public/nextjs.svg';
 import prismaIcon from '/public/prisma.svg';
 import reactIcon from '/public/react.svg';
@@ -29,12 +30,12 @@ export const projects: ProjectType[] = [
     deployLink: 'https://brandonwu500-car-rental-web-app-v1.vercel.app',
   },
   {
-    imgUrl: carRentalThumbnail,
+    imgUrl: myPortfolioThumbnail,
     title: 'My Portfolio',
     description:
       'My personal portfolio, which is the website you are currently viewing!',
     codeLink: 'https://github.com/BrandonWu500/my-portfolio',
-    deployLink: '',
+    deployLink: 'https://brandonwu500-my-portfolio.vercel.app',
     designLink:
       'https://www.figma.com/file/WnCAyzR6Wf6o70u9D2JOp9/My-Portfolio-Web-Design?type=design&node-id=109%3A8334&mode=design&t=s4uJvIVlACkYJkgZ-1',
   },
