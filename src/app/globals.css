@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 .heroBg {
-  background: linear-gradient(180deg, rgba(23, 23, 23, 0.85) 55%, #171717),
-    url('/hero-bg-img.jpeg');
+  background: linear-gradient(180deg, rgba(23, 23, 23, 0.85) 55%, #171717);
   background-size: cover;
   background-position: center;
 }
