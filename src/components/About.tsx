@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion';
 
+import ScrollDownIndicator from '@/components/ScrollDownIndicator';
+import SectionTitle from '@/components/SectionTitle';
 import Button from '@/components/ui/button/Button';
 import { experience } from '@/constants/data';
 
-import SectionTitle from '@/components/SectionTitle';
 import arrowDownTray from '/public/arrow-down-tray.svg';
 
 type Props = {};
@@ -86,6 +87,7 @@ const About = (props: Props) => {
           </a>
         </motion.div>
       </div>
+      <ScrollDownIndicator />
     </div>
   );
 };
