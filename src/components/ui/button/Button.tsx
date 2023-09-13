@@ -27,7 +27,7 @@ type Props = VariantProps<typeof buttonStyles> & {
   label: string;
   svgIcon?: any;
   className?: string;
-  onClick?: React.MouseEventHandler;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 const Button = ({
   intent = 'primary',
