@@ -10,6 +10,7 @@ import { BREAKPOINTS } from '@/constants/breakpoints';
 import { mySocialLinks } from '@/constants/data';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 
+import heroBgImg from '/public/hero-bg-img.jpeg';
 import headshot from '/public/my-portrait.jpg';
 
 type Props = {
@@ -126,6 +127,16 @@ const Hero = ({ scrollToRef }: Props) => {
           )
         )}
       </motion.div>
+
+      {/* BACKGROUND IMAGE */}
+      <Image
+        src={heroBgImg}
+        alt=""
+        className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+        priority
+        sizes="(max-width: 768px) 100vw, 100vh"
+      />
+
       <ScrollDownIndicator />
     </div>
   );
