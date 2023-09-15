@@ -102,6 +102,8 @@ const ProjectCard = ({
           {designLink && (
             <Link
               href={designLink}
+              rel="noopener noreferrer"
+              target="_blank"
               className={twMerge(
                 'flex items-center gap-2 font-body text-sm font-medium',
                 size === 'large' && 'text-base'
@@ -112,6 +114,8 @@ const ProjectCard = ({
           )}
           <Link
             href={codeLink}
+            rel="noopener noreferrer"
+            target="_blank"
             className={twMerge(
               'flex items-center gap-2 font-body text-sm font-medium',
               size === 'large' && 'text-base'
@@ -121,6 +125,8 @@ const ProjectCard = ({
           </Link>
           <Link
             href={deployLink}
+            rel="noopener noreferrer"
+            target="_blank"
             className={twMerge(
               'flex items-center gap-2 font-body text-sm font-medium',
               size === 'large' && 'text-base'
