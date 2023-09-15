@@ -3,7 +3,7 @@ import { Besley, Inter } from 'next/font/google';
 
 import Header from '@/src/components/ui/header/Header';
 
-import './globals.css';
+import '../globals.css';
 
 const besley = Besley({ subsets: ['latin'], variable: '--heading-font' });
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
