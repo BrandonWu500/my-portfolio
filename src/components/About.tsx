@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion';
 
-import ScrollDownIndicator from '@/components/ScrollDownIndicator';
-import SectionTitle from '@/components/SectionTitle';
-import Button from '@/components/ui/button/Button';
-import { experience } from '@/constants/data';
+import ScrollDownIndicator from '@/src/components/ScrollDownIndicator';
+import SectionTitle from '@/src/components/SectionTitle';
+import Button from '@/src/components/ui/button/Button';
+import { experience } from '@/src/constants/data';
 
 import arrowDownTray from '/public/arrow-down-tray.svg';
 

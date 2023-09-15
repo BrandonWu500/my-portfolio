@@ -3,16 +3,16 @@
 import { motion } from 'framer-motion';
 import { useMemo } from 'react';
 
-import ScrollDownIndicator from '@/components/ScrollDownIndicator';
-import SectionTitle from '@/components/SectionTitle';
-import Skill from '@/components/ui/skill/Skill';
-import { BREAKPOINTS } from '@/constants/breakpoints';
+import ScrollDownIndicator from '@/src/components/ScrollDownIndicator';
+import SectionTitle from '@/src/components/SectionTitle';
+import Skill from '@/src/components/ui/skill/Skill';
+import { BREAKPOINTS } from '@/src/constants/breakpoints';
 import {
   favoriteTech,
   otherTechDesktop,
   otherTechMobile,
-} from '@/constants/data';
-import useWindowDimensions from '@/hooks/useWindowDimensions';
+} from '@/src/constants/data';
+import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
 type Props = {};
 const Skills = (props: Props) => {

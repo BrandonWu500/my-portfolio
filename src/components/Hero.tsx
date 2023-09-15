@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import ScrollDownIndicator from '@/components/ScrollDownIndicator';
-import Button from '@/components/ui/button/Button';
-import { BREAKPOINTS } from '@/constants/breakpoints';
-import { mySocialLinks } from '@/constants/data';
-import useWindowDimensions from '@/hooks/useWindowDimensions';
+import ScrollDownIndicator from '@/src/components/ScrollDownIndicator';
+import Button from '@/src/components/ui/button/Button';
+import { BREAKPOINTS } from '@/src/constants/breakpoints';
+import { mySocialLinks } from '@/src/constants/data';
+import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
 import heroBgImg from '/public/hero-bg-img.jpeg';
 import headshot from '/public/my-portrait.jpg';

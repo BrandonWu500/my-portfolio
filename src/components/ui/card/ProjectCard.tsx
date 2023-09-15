@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { ProjectType } from '@/types';
+import { ProjectType } from '@/src/types';
 
 import figmaIcon from '/public/figma.svg';
 import githubIcon from '/public/github.svg';

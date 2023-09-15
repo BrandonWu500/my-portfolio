@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 
-import { BREAKPOINTS } from '@/constants/breakpoints';
-import useWindowDimensions from '@/hooks/useWindowDimensions';
+import { BREAKPOINTS } from '@/src/constants/breakpoints';
+import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
 type Props = {};
 const ScrollDownIndicator = (props: Props) => {
