@@ -6,7 +6,9 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { ProjectType } from '@/src/types';
+import { BREAKPOINTS } from '../../../../src/constants/breakpoints';
+import useWindowDimensions from '../../../../src/hooks/useWindowDimensions';
+import { ProjectType } from '../../../../src/types';
 
 import figmaIcon from '/public/figma.svg';
 import githubIcon from '/public/github.svg';
@@ -16,15 +18,7 @@ const besley = Besley({ subsets: ['latin'], variable: '--heading-font' });
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
 
 const projectCardStyles = cva(
-  `${besley.variable} ${inter.variable} bg-neutral-700 text-neutral-50 shadow`,
-  {
-    variants: {
-      size: {
-        small: 'max-w-[350px]',
-        large: 'max-w-[400px]',
-      },
-    },
-  }
+  `${besley.variable} ${inter.variable} bg-neutral-700 text-neutral-50 shadow max-w-[350px] xl:max-w-[400px]`
 );
 
 type Props = VariantProps<typeof projectCardStyles> & ProjectType;
@@ -35,8 +29,13 @@ const ProjectCard = ({
   codeLink,
   deployLink,
   designLink,
-  size = 'small',
 }: Props) => {
+  const { width } = useWindowDimensions();
+
+  const size = useMemo(() => {
+    return width && width >= BREAKPOINTS.XL ? 'large' : 'small';
+  }, [width]);
+
   const imgWidth = useMemo(() => {
     switch (size) {
       case 'small':
@@ -74,7 +73,7 @@ const ProjectCard = ({
       }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className={projectCardStyles({ size })}
+      className={projectCardStyles()}
     >
       <Image
         src={imgUrl}

@@ -25,11 +25,3 @@ export const Base: Story = {
 export const DesignLink: Story = {
   args: { ...projects[1] },
 };
-
-export const Small: Story = {
-  args: { ...projects[0], size: 'small' },
-};
-
-export const Large: Story = {
-  args: { ...projects[0], size: 'large' },
-};
