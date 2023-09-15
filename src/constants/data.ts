@@ -1,4 +1,4 @@
-import { ProjectType } from '@/types';
+import { ProjectType } from '@/src/types';
 
 import carRentalThumbnail from '/public/car-rental-project-thumbnail.png';
 import cypressIcon from '/public/cypress.svg';

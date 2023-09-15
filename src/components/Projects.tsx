@@ -1,11 +1,11 @@
 'use client';
 
-import ScrollDownIndicator from '@/components/ScrollDownIndicator';
-import SectionTitle from '@/components/SectionTitle';
-import ProjectCard from '@/components/ui/card/ProjectCard';
-import { BREAKPOINTS } from '@/constants/breakpoints';
-import { projects } from '@/constants/data';
-import useWindowDimensions from '@/hooks/useWindowDimensions';
+import ScrollDownIndicator from '@/src/components/ScrollDownIndicator';
+import SectionTitle from '@/src/components/SectionTitle';
+import ProjectCard from '@/src/components/ui/card/ProjectCard';
+import { BREAKPOINTS } from '@/src/constants/breakpoints';
+import { projects } from '@/src/constants/data';
+import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
 type Props = {};
 const Projects = (props: Props) => {

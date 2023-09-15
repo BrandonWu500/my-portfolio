@@ -5,11 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo } from 'react';
 
-import SectionTitle from '@/components/SectionTitle';
-import Button from '@/components/ui/button/Button';
-import { BREAKPOINTS } from '@/constants/breakpoints';
-import { mySocialLinks } from '@/constants/data';
-import useWindowDimensions from '@/hooks/useWindowDimensions';
+import SectionTitle from '@/src/components/SectionTitle';
+import Button from '@/src/components/ui/button/Button';
+import { BREAKPOINTS } from '@/src/constants/breakpoints';
+import { mySocialLinks } from '@/src/constants/data';
+import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
 import arrowUpCircle from '/public/arrow-up-circle.svg';
 
