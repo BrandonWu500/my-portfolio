@@ -1,15 +1,32 @@
-'use client';
-
+import { client } from '@/sanity/lib/client';
 import ScrollDownIndicator from '@/src/components/ScrollDownIndicator';
 import SectionTitle from '@/src/components/SectionTitle';
 import ProjectCard from '@/src/components/ui/card/ProjectCard';
-import { BREAKPOINTS } from '@/src/constants/breakpoints';
-import { projects } from '@/src/constants/data';
-import useWindowDimensions from '@/src/hooks/useWindowDimensions';
+import { ProjectType } from '@/src/types';
+
+async function getProjects(): Promise<ProjectType[]> {
+  const query = `
+  *[_type == 'project'] {
+    title,
+    description,
+    codeLink,
+    deployLink,
+    designLink,
+      _id,
+      "imgUrl": image.asset->url
+  }
+  `;
+
+  const projects = await client.fetch(query);
+
+  return projects;
+}
+
+export const revalidate = 60;
 
 type Props = {};
-const Projects = (props: Props) => {
-  const { width } = useWindowDimensions();
+const Projects = async (props: Props) => {
+  const projects = await getProjects();
 
   return (
     <div
@@ -19,11 +36,7 @@ const Projects = (props: Props) => {
       <SectionTitle title="Projects" />
       <div className="flex flex-col items-center gap-8 lg:mt-16 lg:flex-row lg:justify-center lg:gap-[56px] xl:mt-24">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            {...project}
-            size={width && width >= BREAKPOINTS.XL ? 'large' : 'small'}
-          />
+          <ProjectCard key={project._id} {...project} />
         ))}
       </div>
 
