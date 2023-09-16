@@ -19,6 +19,7 @@ Here is what I used to create my portfolio:
 - TypeScript
 - Tailwind
 - Framer Motion
+- Sanity
 
 ## Links
 
@@ -28,4 +29,6 @@ Here is what I used to create my portfolio:
 
 [Deployment](https://brandonwu500-my-portfolio.vercel.app)
 
-[Back To The Top](#my-portfolio)
+---
+
+[Back to the top](#my-portfolio)
