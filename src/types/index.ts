@@ -9,3 +9,8 @@ export type ProjectType = {
   designLink?: string;
   _id?: string;
 };
+
+export type AboutType = {
+  experience: string[];
+  resumeUrl: string;
+};
