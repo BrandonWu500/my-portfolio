@@ -17,16 +17,7 @@ async function getAbout(): Promise<AboutType> {
 }
 
 export const useAbout = () => {
-  const {
-    data: aboutData,
-    error,
-    isLoading,
-  } = useSWR('about', getAbout, {
-    revalidateOnMount: true,
-    revalidateOnReconnect: true,
-    revalidateOnFocus: true,
-    refreshInterval: 60,
-  });
+  const { data: aboutData, error, isLoading } = useSWR('about', getAbout);
 
   return {
     aboutData,
