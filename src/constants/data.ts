@@ -2,7 +2,7 @@ import { ProjectType } from '@/src/types';
 
 import carRentalThumbnail from '/public/car-rental-project-thumbnail.png';
 import cypressIcon from '/public/cypress.svg';
-import figmaIcon from '/public/figma-color.svg';
+import figmaIcon from '/public/figma-large.svg';
 import githubActionsIcon from '/public/github-actions.svg';
 import githubDarkIcon from '/public/github-dark.svg';
 import githubIcon from '/public/github.svg';
