@@ -59,7 +59,7 @@ const Skills = (props: Props) => {
           duration: 1.5,
         }}
         viewport={{ once: true }}
-        className="mx-auto w-full bg-neutral-200 p-5 text-center text-neutral-900 xl:mt-5 xl:max-w-4xl"
+        className="mx-auto w-full bg-neutral-300 p-5 text-center text-neutral-700 xl:mt-5 xl:max-w-4xl"
       >
         <h4 className="mb-4 font-heading text-lg font-semibold lg:text-xl xl:mb-8">
           Other Tech I Use
