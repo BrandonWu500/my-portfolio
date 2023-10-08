@@ -64,7 +64,7 @@ const Skills = (props: Props) => {
         <h4 className="mb-4 font-heading text-lg font-semibold lg:text-xl xl:mb-8">
           Other Tech I Use
         </h4>
-        <div className="mx-auto grid max-w-xs grid-cols-3 place-items-center gap-y-4 lg:max-w-3xl lg:grid-cols-5 xl:max-w-none">
+        <div className="mx-auto grid max-w-xs grid-cols-3 place-items-center gap-y-4 lg:max-w-3xl lg:grid-cols-6 xl:max-w-none">
           {otherTech.map((tech) => (
             <Skill
               svgIcon={tech.svgIcon}
