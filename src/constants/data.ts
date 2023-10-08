@@ -2,19 +2,19 @@ import { ProjectType } from '@/src/types';
 
 import carRentalThumbnail from '/public/car-rental-project-thumbnail.png';
 import figmaIcon from '/public/figma-large.svg';
-import githubDarkIcon from '/public/github-dark.svg';
 import githubIcon from '/public/github.svg';
-import jiraIcon from '/public/jira.svg';
 import linkedinIcon from '/public/linkedin.svg';
 import mailIcon from '/public/mail.svg';
 import myPortfolioThumbnail from '/public/my-portfolio-thumbnail.png';
 import nextjsIcon from '/public/nextjs.svg';
-import reactIcon from '/public/react.svg';
-import sanityIcon from '/public/sanity.svg';
-import shopifyIcon from '/public/shopify.svg';
+import githubDarkIcon from '/public/other-tech/github.svg';
+import jiraIcon from '/public/other-tech/jira.svg';
+import reactIcon from '/public/other-tech/react.svg';
+import sanityIcon from '/public/other-tech/sanity.svg';
+import shopifyIcon from '/public/other-tech/shopify.svg';
+import vercelIcon from '/public/other-tech/vercel.svg';
 import tailwindIcon from '/public/tailwind.svg';
 import typescriptIcon from '/public/typescript.svg';
-import vercelIcon from '/public/vercel.svg';
 
 export const projects: ProjectType[] = [
   {
@@ -118,12 +118,12 @@ export const otherTech = [
     label: 'React',
   },
   {
-    svgIcon: jiraIcon,
-    label: 'Jira',
-  },
-  {
     svgIcon: githubDarkIcon,
     label: 'GitHub',
+  },
+  {
+    svgIcon: jiraIcon,
+    label: 'Jira',
   },
   {
     svgIcon: vercelIcon,
