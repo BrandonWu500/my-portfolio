@@ -31,7 +31,7 @@ const Skills = (props: Props) => {
           duration: 1.5,
         }}
         viewport={{ once: true }}
-        className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:max-w-4xl xl:border xl:border-neutral-700 xl:bg-transparent xl:p-8"
+        className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:max-w-4xl xl:p-8"
       >
         <h4 className="mb-4 font-heading text-lg font-medium lg:text-xl xl:mb-8 xl:font-body xl:text-2xl xl:uppercase xl:tracking-[6px]">
           My Favorite Tech
@@ -59,7 +59,7 @@ const Skills = (props: Props) => {
           duration: 1.5,
         }}
         viewport={{ once: true }}
-        className="mx-auto w-full bg-neutral-200 p-5 text-center text-neutral-900 xl:max-w-4xl"
+        className="mx-auto w-full bg-neutral-200 p-5 text-center text-neutral-900 xl:mt-5 xl:max-w-4xl"
       >
         <h4 className="mb-4 font-heading text-lg font-semibold lg:text-xl xl:mb-8">
           Other Tech I Use
