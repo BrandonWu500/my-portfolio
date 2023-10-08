@@ -1,22 +1,18 @@
 import { ProjectType } from '@/src/types';
 
 import carRentalThumbnail from '/public/car-rental-project-thumbnail.png';
-import cypressIcon from '/public/cypress.svg';
 import figmaIcon from '/public/figma-large.svg';
-import githubActionsIcon from '/public/github-actions.svg';
 import githubDarkIcon from '/public/github-dark.svg';
 import githubIcon from '/public/github.svg';
 import jiraIcon from '/public/jira.svg';
 import linkedinIcon from '/public/linkedin.svg';
 import mailIcon from '/public/mail.svg';
-import mongodbIcon from '/public/mongodb.svg';
 import myPortfolioThumbnail from '/public/my-portfolio-thumbnail.png';
 import nextjsIcon from '/public/nextjs.svg';
-import prismaIcon from '/public/prisma.svg';
 import reactIcon from '/public/react.svg';
-import storybookIcon from '/public/storybook.svg';
+import sanityIcon from '/public/sanity.svg';
+import shopifyIcon from '/public/shopify.svg';
 import tailwindIcon from '/public/tailwind.svg';
-import testingLibraryIcon from '/public/testing-library.svg';
 import typescriptIcon from '/public/typescript.svg';
 import vercelIcon from '/public/vercel.svg';
 
@@ -108,84 +104,29 @@ export const favoriteTech = [
   },
 ];
 
-export const otherTechMobile = [
+export const otherTech = [
   {
-    svgIcon: storybookIcon,
-    label: 'Storybook',
+    svgIcon: shopifyIcon,
+    label: 'Shopify',
   },
   {
-    svgIcon: cypressIcon,
-    label: 'Cypress',
-  },
-  {
-    svgIcon: testingLibraryIcon,
-    label: 'Testing Library',
-  },
-  {
-    svgIcon: jiraIcon,
-    label: 'Jira',
-  },
-  {
-    svgIcon: githubDarkIcon,
-    label: 'GitHub',
-  },
-  {
-    svgIcon: githubActionsIcon,
-    label: 'CI/CD',
+    svgIcon: sanityIcon,
+    label: 'Sanity',
   },
   {
     svgIcon: reactIcon,
     label: 'React',
   },
   {
-    svgIcon: mongodbIcon,
-    label: 'MongoDB',
-  },
-  {
-    svgIcon: prismaIcon,
-    label: 'Prisma',
-  },
-];
-
-export const otherTechDesktop = [
-  {
-    svgIcon: storybookIcon,
-    label: 'Storybook',
-  },
-  {
-    svgIcon: cypressIcon,
-    label: 'Cypress',
-  },
-  {
-    svgIcon: testingLibraryIcon,
-    label: 'Testing Library',
-  },
-  {
     svgIcon: jiraIcon,
     label: 'Jira',
   },
   {
     svgIcon: githubDarkIcon,
     label: 'GitHub',
-  },
-  {
-    svgIcon: githubActionsIcon,
-    label: 'GitHub Actions',
   },
   {
     svgIcon: vercelIcon,
     label: 'Vercel',
-  },
-  {
-    svgIcon: reactIcon,
-    label: 'React',
-  },
-  {
-    svgIcon: mongodbIcon,
-    label: 'MongoDB',
-  },
-  {
-    svgIcon: prismaIcon,
-    label: 'Prisma',
   },
 ];

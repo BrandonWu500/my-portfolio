@@ -1,28 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useMemo } from 'react';
 
 import ScrollDownIndicator from '@/src/components/ScrollDownIndicator';
 import SectionTitle from '@/src/components/SectionTitle';
 import Skill from '@/src/components/ui/skill/Skill';
 import { BREAKPOINTS } from '@/src/constants/breakpoints';
-import {
-  favoriteTech,
-  otherTechDesktop,
-  otherTechMobile,
-} from '@/src/constants/data';
+import { favoriteTech, otherTech } from '@/src/constants/data';
 import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
 type Props = {};
 const Skills = (props: Props) => {
   const { width } = useWindowDimensions();
-
-  const otherSkills = useMemo(() => {
-    return width && width >= BREAKPOINTS.LG
-      ? otherTechDesktop
-      : otherTechMobile;
-  }, [width]);
 
   return (
     <div
@@ -76,7 +65,7 @@ const Skills = (props: Props) => {
           Other Tech I Use
         </h4>
         <div className="mx-auto grid max-w-xs grid-cols-3 place-items-center gap-y-4 lg:max-w-3xl lg:grid-cols-5 xl:max-w-none">
-          {otherSkills.map((tech) => (
+          {otherTech.map((tech) => (
             <Skill
               svgIcon={tech.svgIcon}
               label={tech.label}
