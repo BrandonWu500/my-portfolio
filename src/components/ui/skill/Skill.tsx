@@ -64,7 +64,7 @@ const Skill = ({
       className={skillStyles({ size, intent })}
     >
       <Image src={svgIcon} alt="skill icon" width={svgSize} height={svgSize} />
-      <p className="">{label}</p>
+      <p className="mt-1">{label}</p>
     </motion.div>
   );
 };

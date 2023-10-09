@@ -1,28 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useMemo } from 'react';
 
 import ScrollDownIndicator from '@/src/components/ScrollDownIndicator';
 import SectionTitle from '@/src/components/SectionTitle';
 import Skill from '@/src/components/ui/skill/Skill';
 import { BREAKPOINTS } from '@/src/constants/breakpoints';
-import {
-  favoriteTech,
-  otherTechDesktop,
-  otherTechMobile,
-} from '@/src/constants/data';
+import { favoriteTech, otherTech } from '@/src/constants/data';
 import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
 type Props = {};
 const Skills = (props: Props) => {
   const { width } = useWindowDimensions();
-
-  const otherSkills = useMemo(() => {
-    return width && width >= BREAKPOINTS.LG
-      ? otherTechDesktop
-      : otherTechMobile;
-  }, [width]);
 
   return (
     <div
@@ -42,7 +31,7 @@ const Skills = (props: Props) => {
           duration: 1.5,
         }}
         viewport={{ once: true }}
-        className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:max-w-4xl xl:border xl:border-neutral-700 xl:bg-transparent xl:p-8"
+        className="w-full bg-neutral-700 p-5 text-center xl:mx-auto xl:max-w-4xl xl:p-8"
       >
         <h4 className="mb-4 font-heading text-lg font-medium lg:text-xl xl:mb-8 xl:font-body xl:text-2xl xl:uppercase xl:tracking-[6px]">
           My Favorite Tech
@@ -70,13 +59,13 @@ const Skills = (props: Props) => {
           duration: 1.5,
         }}
         viewport={{ once: true }}
-        className="mx-auto w-full bg-neutral-200 p-5 text-center text-neutral-900 xl:max-w-4xl"
+        className="mx-auto w-full bg-neutral-300 p-5 text-center text-neutral-700 xl:mt-5 xl:max-w-4xl"
       >
         <h4 className="mb-4 font-heading text-lg font-semibold lg:text-xl xl:mb-8">
           Other Tech I Use
         </h4>
-        <div className="mx-auto grid max-w-xs grid-cols-3 place-items-center gap-y-4 lg:max-w-3xl lg:grid-cols-5 xl:max-w-none">
-          {otherSkills.map((tech) => (
+        <div className="mx-auto grid max-w-xs grid-cols-3 place-items-center gap-y-4 lg:max-w-3xl lg:grid-cols-6 xl:max-w-none">
+          {otherTech.map((tech) => (
             <Skill
               svgIcon={tech.svgIcon}
               label={tech.label}
