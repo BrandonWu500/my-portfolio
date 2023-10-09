@@ -92,7 +92,7 @@ const ProjectCard = ({
         </h5>
         <p
           className={twMerge(
-            'max-w-xs font-body',
+            'max-w-sm font-body lg:h-[100px]',
             size === 'large' && 'text-lg'
           )}
         >
