@@ -88,7 +88,7 @@ const Header = (props: Props) => {
           isOpen && 'translate-x-[250px]'
         )}
       >
-        <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
+        <ul className="flex flex-col gap-8 p-8 pt-6 font-heading text-xl">
           {navLinks.map((link) => (
             <li key={link.label} onClick={() => setIsOpen(false)}>
               <Link href={link.url}>{link.label}</Link>
