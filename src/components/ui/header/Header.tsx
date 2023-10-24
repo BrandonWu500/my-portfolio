@@ -13,7 +13,7 @@ import Button from '../button/Button';
 
 import mobileNavIcon from '/public/bars-3.svg';
 import mobileLogo from '/public/mobile-logo.svg';
-import closeIcon from '/public/x-circle.svg';
+import closeIcon from '/public/x-mark.svg';
 
 const besley = Besley({ subsets: ['latin'], variable: '--heading-font' });
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
@@ -46,7 +46,7 @@ const Header = (props: Props) => {
 
         <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
-            <Image src={closeIcon} alt="close" width={48} height={48} />
+            <Image src={closeIcon} alt="close" width={32} height={32} />
           ) : (
             <Image src={mobileNavIcon} alt="menu" />
           )}
