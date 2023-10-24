@@ -68,19 +68,19 @@ const Contact = (props: Props) => {
           duration: 2,
         }}
         viewport={{ once: true }}
-        className="mt-16 w-full bg-neutral-700 p-2 pb-5 lg:absolute lg:bottom-0 lg:pb-2"
+        className="mt-16 w-full bg-neutral-700 p-2 pb-5 lg:absolute lg:bottom-0 lg:p-0"
       >
-        <div className="flex w-full flex-col items-center gap-8 lg:container lg:mx-auto lg:grid lg:h-20 lg:grid-cols-3 lg:place-items-center xl:h-[100px] xl:px-16">
-          <Link href={'#hero'} className="lg:order-3">
+        <div className="flex w-full max-w-[1440px] flex-col items-center gap-4 lg:mx-auto lg:grid lg:h-20 lg:grid-cols-3 lg:px-8 xl:h-[100px]">
+          <Link href={'#hero'} className="lg:order-3 lg:flex lg:justify-end">
             <Button
               label="Back to Top"
               svgIcon={arrowUpCircle}
               intent={'secondary'}
-              className="flex-row-reverse"
+              className="flex-row-reverse lg:pr-0"
               size={width && width >= BREAKPOINTS.XL ? 'medium' : 'small'}
             />
           </Link>
-          <div className="flex items-center gap-12 lg:order-1">
+          <div className="flex items-center gap-8 lg:order-1">
             {Object.values(mySocialLinks)
               .filter((link) => link.label !== 'mail icon')
               .map((link) => (
@@ -95,7 +95,7 @@ const Contact = (props: Props) => {
                 </Link>
               ))}
           </div>
-          <p className="font-body text-sm lg:order-2 xl:text-lg">
+          <p className="mt-2 font-body text-sm lg:order-2 lg:mt-0 lg:flex lg:justify-center xl:text-lg">
             © 2023 Brandon Wu. All rights reserved.
           </p>
         </div>
