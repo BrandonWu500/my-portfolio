@@ -47,10 +47,6 @@ export const navLinks = [
     url: '#projects',
     label: 'Projects',
   },
-  {
-    url: '#contact',
-    label: 'Contact',
-  },
 ];
 
 export const favoriteTech = [

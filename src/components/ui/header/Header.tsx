@@ -12,6 +12,7 @@ import { navLinks } from '../../../constants/data';
 import Button from '../button/Button';
 
 import mobileNavIcon from '/public/bars-3.svg';
+import desktopLogo from '/public/desktop-logo.svg';
 import mobileLogo from '/public/mobile-logo.svg';
 import closeIcon from '/public/x-mark.svg';
 
@@ -38,10 +39,18 @@ const Header = (props: Props) => {
         transition={{
           duration: 1.5,
         }}
-        className="container mx-auto flex h-24 items-center justify-between p-8 xl:justify-evenly xl:pl-16"
+        className="mx-auto flex h-24 max-w-[1440px] items-center justify-between p-8 xl:justify-between"
       >
-        <Link href={'#hero'} onClick={() => setIsOpen(false)}>
-          <Image src={mobileLogo} alt="logo" />
+        <Link
+          href={'#hero'}
+          className="xl:hidden"
+          onClick={() => setIsOpen(false)}
+        >
+          <Image src={mobileLogo} alt="Brandon Wu logo" />
+        </Link>
+
+        <Link href={'#hero'} className="hidden xl:block">
+          <Image src={desktopLogo} alt="Brandon Wu logo" />
         </Link>
 
         <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -62,10 +71,10 @@ const Header = (props: Props) => {
           ></div>
         )}
 
-        <div className="hidden items-center gap-[72px] lg:flex">
+        <div className="hidden items-center gap-12 lg:flex">
           {/* DESKTOP NAV */}
           <nav>
-            <ul className="flex items-center gap-[72px] font-heading font-medium xl:text-xl">
+            <ul className="flex items-center gap-12 font-heading xl:text-lg">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.url}>{link.label}</Link>
