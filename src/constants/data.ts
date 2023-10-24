@@ -30,7 +30,7 @@ export const mySocialLinks = {
   },
 };
 
-export const navLinks = [
+export const desktopNavLinks = [
   {
     url: '#hero',
     label: 'Home',
@@ -46,6 +46,29 @@ export const navLinks = [
   {
     url: '#projects',
     label: 'Projects',
+  },
+];
+
+export const mobileNavLinks = [
+  {
+    url: '#hero',
+    label: 'Home',
+  },
+  {
+    url: '#about',
+    label: 'About',
+  },
+  {
+    url: '#skills',
+    label: 'Skills',
+  },
+  {
+    url: '#projects',
+    label: 'Projects',
+  },
+  {
+    url: '#contact',
+    label: 'Contact',
   },
 ];
 

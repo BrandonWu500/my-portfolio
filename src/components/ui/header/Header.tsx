@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { navLinks } from '../../../constants/data';
+import { desktopNavLinks, mobileNavLinks } from '../../../constants/data';
 
 import Button from '../button/Button';
 
@@ -75,7 +75,7 @@ const Header = (props: Props) => {
           {/* DESKTOP NAV */}
           <nav>
             <ul className="flex items-center gap-12 font-heading xl:text-lg">
-              {navLinks.map((link) => (
+              {desktopNavLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.url}>{link.label}</Link>
                 </li>
@@ -98,7 +98,7 @@ const Header = (props: Props) => {
         )}
       >
         <ul className="flex flex-col gap-8 p-8 pt-6 font-heading text-xl">
-          {navLinks.map((link) => (
+          {mobileNavLinks.map((link) => (
             <li key={link.label} onClick={() => setIsOpen(false)}>
               <Link href={link.url}>{link.label}</Link>
             </li>
