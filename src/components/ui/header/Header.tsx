@@ -7,13 +7,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { navLinks } from '../../../constants/data';
+import { desktopNavLinks, mobileNavLinks } from '../../../constants/data';
 
 import Button from '../button/Button';
 
 import mobileNavIcon from '/public/bars-3.svg';
+import desktopLogo from '/public/desktop-logo.svg';
 import mobileLogo from '/public/mobile-logo.svg';
-import closeIcon from '/public/x-circle.svg';
+import closeIcon from '/public/x-mark.svg';
 
 const besley = Besley({ subsets: ['latin'], variable: '--heading-font' });
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
@@ -38,15 +39,23 @@ const Header = (props: Props) => {
         transition={{
           duration: 1.5,
         }}
-        className="container mx-auto flex h-24 items-center justify-between p-8 xl:justify-evenly xl:pl-16"
+        className="mx-auto flex h-24 max-w-[1440px] items-center justify-between p-8 xl:justify-between"
       >
-        <Link href={'#hero'} onClick={() => setIsOpen(false)}>
-          <Image src={mobileLogo} alt="logo" />
+        <Link
+          href={'#hero'}
+          className="xl:hidden"
+          onClick={() => setIsOpen(false)}
+        >
+          <Image src={mobileLogo} alt="Brandon Wu logo" />
+        </Link>
+
+        <Link href={'#hero'} className="hidden xl:block">
+          <Image src={desktopLogo} alt="Brandon Wu logo" />
         </Link>
 
         <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
-            <Image src={closeIcon} alt="close" width={48} height={48} />
+            <Image src={closeIcon} alt="close" width={32} height={32} />
           ) : (
             <Image src={mobileNavIcon} alt="menu" />
           )}
@@ -62,11 +71,11 @@ const Header = (props: Props) => {
           ></div>
         )}
 
-        <div className="hidden items-center gap-[72px] lg:flex">
+        <div className="hidden items-center gap-12 lg:flex">
           {/* DESKTOP NAV */}
           <nav>
-            <ul className="flex items-center gap-[72px] font-heading font-medium xl:text-xl">
-              {navLinks.map((link) => (
+            <ul className="flex items-center gap-12 font-heading xl:text-lg">
+              {desktopNavLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.url}>{link.label}</Link>
                 </li>
@@ -88,8 +97,8 @@ const Header = (props: Props) => {
           isOpen && 'translate-x-[250px]'
         )}
       >
-        <ul className="flex flex-col gap-12 p-8 pt-6 font-heading text-2xl font-semibold">
-          {navLinks.map((link) => (
+        <ul className="flex flex-col gap-8 p-8 pt-6 font-heading text-xl">
+          {mobileNavLinks.map((link) => (
             <li key={link.label} onClick={() => setIsOpen(false)}>
               <Link href={link.url}>{link.label}</Link>
             </li>

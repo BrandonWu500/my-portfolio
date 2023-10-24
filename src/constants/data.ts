@@ -4,9 +4,9 @@ import linkedinIcon from '/public/linkedin.svg';
 import mailIcon from '/public/mail.svg';
 import nextjsIcon from '/public/nextjs.svg';
 import githubDarkIcon from '/public/other-tech/github.svg';
+import illustratorIcon from '/public/other-tech/illustrator.svg';
 import jiraIcon from '/public/other-tech/jira.svg';
 import reactIcon from '/public/other-tech/react.svg';
-import sanityIcon from '/public/other-tech/sanity.svg';
 import shopifyIcon from '/public/other-tech/shopify.svg';
 import vercelIcon from '/public/other-tech/vercel.svg';
 import tailwindIcon from '/public/tailwind.svg';
@@ -30,7 +30,26 @@ export const mySocialLinks = {
   },
 };
 
-export const navLinks = [
+export const desktopNavLinks = [
+  {
+    url: '#hero',
+    label: 'Home',
+  },
+  {
+    url: '#about',
+    label: 'About',
+  },
+  {
+    url: '#skills',
+    label: 'Skills',
+  },
+  {
+    url: '#projects',
+    label: 'Projects',
+  },
+];
+
+export const mobileNavLinks = [
   {
     url: '#hero',
     label: 'Home',
@@ -78,8 +97,8 @@ export const otherTech = [
     label: 'Shopify',
   },
   {
-    svgIcon: sanityIcon,
-    label: 'Sanity',
+    svgIcon: illustratorIcon,
+    label: 'Illustrator',
   },
   {
     svgIcon: reactIcon,
