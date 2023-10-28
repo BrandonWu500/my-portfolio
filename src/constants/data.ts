@@ -36,16 +36,12 @@ export const desktopNavLinks = [
     label: 'Home',
   },
   {
-    url: '#about',
-    label: 'About',
+    url: '#projects',
+    label: 'Projects',
   },
   {
     url: '#skills',
     label: 'Skills',
-  },
-  {
-    url: '#projects',
-    label: 'Projects',
   },
 ];
 
@@ -55,16 +51,12 @@ export const mobileNavLinks = [
     label: 'Home',
   },
   {
-    url: '#about',
-    label: 'About',
+    url: '#projects',
+    label: 'Projects',
   },
   {
     url: '#skills',
     label: 'Skills',
-  },
-  {
-    url: '#projects',
-    label: 'Projects',
   },
   {
     url: '#contact',
