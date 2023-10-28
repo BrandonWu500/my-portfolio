@@ -1,6 +1,5 @@
 import figmaIcon from '/public/figma-large.svg';
 import githubIcon from '/public/github.svg';
-import linkedinIcon from '/public/linkedin.svg';
 import mailIcon from '/public/mail.svg';
 import nextjsIcon from '/public/nextjs.svg';
 import githubDarkIcon from '/public/other-tech/github.svg';
@@ -11,6 +10,7 @@ import shopifyIcon from '/public/other-tech/shopify.svg';
 import vercelIcon from '/public/other-tech/vercel.svg';
 import tailwindIcon from '/public/tailwind.svg';
 import typescriptIcon from '/public/typescript.svg';
+import upworkIcon from '/public/upwork.svg';
 
 export const mySocialLinks = {
   github: {
@@ -18,10 +18,10 @@ export const mySocialLinks = {
     icon: githubIcon,
     label: 'GitHub icon',
   },
-  linkedin: {
-    url: 'https://www.linkedin.com/in/brandonwu500',
-    icon: linkedinIcon,
-    label: 'LinkedIn icon',
+  upwork: {
+    url: 'https://www.upwork.com/freelancers/~0111ef3ba061c9abd8',
+    icon: upworkIcon,
+    label: 'Upwork icon',
   },
   email: {
     url: '#contact',
