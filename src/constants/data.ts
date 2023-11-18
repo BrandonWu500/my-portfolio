@@ -1,15 +1,15 @@
-import figmaIcon from '/public/figma-large.svg';
+import IconFigma from '@/src/components/icons/figma';
+import IconGithub from '@/src/components/icons/github';
+import IconHtml5 from '@/src/components/icons/html';
+import IconAdobeillustrator from '@/src/components/icons/illustrator';
+import IconJavascript from '@/src/components/icons/javascript';
+import IconNextjs from '@/src/components/icons/nextjs';
+import IconReact from '@/src/components/icons/react';
+import IconShopify from '@/src/components/icons/shopify';
+import IconTailwindcss from '@/src/components/icons/tailwind';
+import IconTypescript from '@/src/components/icons/typescript';
 import githubIcon from '/public/github.svg';
 import mailIcon from '/public/mail.svg';
-import nextjsIcon from '/public/nextjs.svg';
-import githubDarkIcon from '/public/other-tech/github.svg';
-import illustratorIcon from '/public/other-tech/illustrator.svg';
-import jiraIcon from '/public/other-tech/jira.svg';
-import reactIcon from '/public/other-tech/react.svg';
-import shopifyIcon from '/public/other-tech/shopify.svg';
-import vercelIcon from '/public/other-tech/vercel.svg';
-import tailwindIcon from '/public/tailwind.svg';
-import typescriptIcon from '/public/typescript.svg';
 import upworkIcon from '/public/upwork.svg';
 
 export const mySocialLinks = {
@@ -66,46 +66,46 @@ export const mobileNavLinks = [
 
 export const favoriteTech = [
   {
-    svgIcon: nextjsIcon,
+    icon: IconNextjs,
     label: 'Next.js',
   },
   {
-    svgIcon: typescriptIcon,
+    icon: IconTypescript,
     label: 'TypeScript',
   },
   {
-    svgIcon: tailwindIcon,
+    icon: IconTailwindcss,
     label: 'Tailwind',
   },
   {
-    svgIcon: figmaIcon,
-    label: 'Figma',
+    icon: IconShopify,
+    label: 'Shopify',
   },
 ];
 
 export const otherTech = [
   {
-    svgIcon: shopifyIcon,
-    label: 'Shopify',
+    icon: IconFigma,
+    label: 'Figma',
   },
   {
-    svgIcon: illustratorIcon,
+    icon: IconAdobeillustrator,
     label: 'Illustrator',
   },
   {
-    svgIcon: reactIcon,
+    icon: IconHtml5,
+    label: 'HTML',
+  },
+  {
+    icon: IconJavascript,
+    label: 'JavaScript',
+  },
+  {
+    icon: IconReact,
     label: 'React',
   },
   {
-    svgIcon: githubDarkIcon,
+    icon: IconGithub,
     label: 'GitHub',
-  },
-  {
-    svgIcon: jiraIcon,
-    label: 'Jira',
-  },
-  {
-    svgIcon: vercelIcon,
-    label: 'Vercel',
   },
 ];
