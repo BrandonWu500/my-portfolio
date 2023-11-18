@@ -1,31 +1,30 @@
-import IconFigma from '@/src/components/icons/figma';
-import IconGithub from '@/src/components/icons/github';
-import IconHtml5 from '@/src/components/icons/html';
-import IconAdobeillustrator from '@/src/components/icons/illustrator';
-import IconJavascript from '@/src/components/icons/javascript';
-import IconNextjs from '@/src/components/icons/nextjs';
-import IconReact from '@/src/components/icons/react';
-import IconShopify from '@/src/components/icons/shopify';
-import IconTailwindcss from '@/src/components/icons/tailwind';
-import IconTypescript from '@/src/components/icons/typescript';
-import githubIcon from '/public/github.svg';
-import mailIcon from '/public/mail.svg';
-import upworkIcon from '/public/upwork.svg';
+import IconFigma from '@/src/components/icon/figma';
+import IconGithub from '@/src/components/icon/github';
+import IconHtml5 from '@/src/components/icon/html';
+import IconAdobeillustrator from '@/src/components/icon/illustrator';
+import IconJavascript from '@/src/components/icon/javascript';
+import IconMail from '@/src/components/icon/mail';
+import IconNextjs from '@/src/components/icon/nextjs';
+import IconReact from '@/src/components/icon/react';
+import IconShopify from '@/src/components/icon/shopify';
+import IconTailwindcss from '@/src/components/icon/tailwind';
+import IconTypescript from '@/src/components/icon/typescript';
+import IconUpwork from '@/src/components/icon/upwork';
 
 export const mySocialLinks = {
   github: {
     url: 'https://github.com/BrandonWu500',
-    icon: githubIcon,
+    icon: IconGithub,
     label: 'GitHub icon',
   },
   upwork: {
     url: 'https://www.upwork.com/freelancers/~0111ef3ba061c9abd8',
-    icon: upworkIcon,
+    icon: IconUpwork,
     label: 'Upwork icon',
   },
   email: {
     url: '#contact',
-    icon: mailIcon,
+    icon: IconMail,
     label: 'mail icon',
   },
 };

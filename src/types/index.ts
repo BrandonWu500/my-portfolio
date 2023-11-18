@@ -6,7 +6,6 @@ export type ProjectType = {
   description: string;
   codeLink: string;
   deployLink: string;
-  designLink?: string;
   _id?: string;
 };
 
