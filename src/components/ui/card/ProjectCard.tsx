@@ -10,9 +10,8 @@ import { BREAKPOINTS } from '../../../../src/constants/breakpoints';
 import useWindowDimensions from '../../../../src/hooks/useWindowDimensions';
 import { ProjectType } from '../../../../src/types';
 
-import figmaIcon from '/public/figma.svg';
-import githubIcon from '/public/github.svg';
-import globeIcon from '/public/globe.svg';
+import IconGithub from '@/src/components/icon/github';
+import IconGlobe from '@/src/components/icon/globe';
 
 const besley = Besley({ subsets: ['latin'], variable: '--heading-font' });
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
@@ -28,7 +27,6 @@ const ProjectCard = ({
   description,
   codeLink,
   deployLink,
-  designLink,
 }: Props) => {
   const { width } = useWindowDimensions();
 
@@ -99,40 +97,21 @@ const ProjectCard = ({
           {description}
         </p>
         <div className="flex gap-8">
-          {designLink && (
-            <Link
-              href={designLink}
-              rel="noopener noreferrer"
-              target="_blank"
-              className={twMerge(
-                'flex items-center gap-2 font-body text-sm font-medium',
-                size === 'large' && 'text-base'
-              )}
-            >
-              <Image src={figmaIcon} alt="figma icon" /> Design
-            </Link>
-          )}
           <Link
             href={codeLink}
             rel="noopener noreferrer"
             target="_blank"
-            className={twMerge(
-              'flex items-center gap-2 font-body text-sm font-medium',
-              size === 'large' && 'text-base'
-            )}
+            className={twMerge('flex items-center gap-3 font-body font-medium')}
           >
-            <Image src={githubIcon} alt="github icon" /> Code
+            <IconGithub className="h-6 w-6" /> Code
           </Link>
           <Link
             href={deployLink}
             rel="noopener noreferrer"
             target="_blank"
-            className={twMerge(
-              'flex items-center gap-2 font-body text-sm font-medium',
-              size === 'large' && 'text-base'
-            )}
+            className={twMerge('flex items-center gap-3 font-body font-medium')}
           >
-            <Image src={globeIcon} alt="globe icon" /> Deployment
+            <IconGlobe className="h-6 w-6" /> Deployment
           </Link>
         </div>
       </div>

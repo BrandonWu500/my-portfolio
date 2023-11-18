@@ -1,31 +1,30 @@
-import figmaIcon from '/public/figma-large.svg';
-import githubIcon from '/public/github.svg';
-import mailIcon from '/public/mail.svg';
-import nextjsIcon from '/public/nextjs.svg';
-import githubDarkIcon from '/public/other-tech/github.svg';
-import illustratorIcon from '/public/other-tech/illustrator.svg';
-import jiraIcon from '/public/other-tech/jira.svg';
-import reactIcon from '/public/other-tech/react.svg';
-import shopifyIcon from '/public/other-tech/shopify.svg';
-import vercelIcon from '/public/other-tech/vercel.svg';
-import tailwindIcon from '/public/tailwind.svg';
-import typescriptIcon from '/public/typescript.svg';
-import upworkIcon from '/public/upwork.svg';
+import IconFigma from '@/src/components/icon/figma';
+import IconGithub from '@/src/components/icon/github';
+import IconHtml5 from '@/src/components/icon/html';
+import IconAdobeillustrator from '@/src/components/icon/illustrator';
+import IconJavascript from '@/src/components/icon/javascript';
+import IconMail from '@/src/components/icon/mail';
+import IconNextjs from '@/src/components/icon/nextjs';
+import IconReact from '@/src/components/icon/react';
+import IconShopify from '@/src/components/icon/shopify';
+import IconTailwindcss from '@/src/components/icon/tailwind';
+import IconTypescript from '@/src/components/icon/typescript';
+import IconUpwork from '@/src/components/icon/upwork';
 
 export const mySocialLinks = {
   github: {
     url: 'https://github.com/BrandonWu500',
-    icon: githubIcon,
+    icon: IconGithub,
     label: 'GitHub icon',
   },
   upwork: {
     url: 'https://www.upwork.com/freelancers/~0111ef3ba061c9abd8',
-    icon: upworkIcon,
+    icon: IconUpwork,
     label: 'Upwork icon',
   },
   email: {
     url: '#contact',
-    icon: mailIcon,
+    icon: IconMail,
     label: 'mail icon',
   },
 };
@@ -66,46 +65,46 @@ export const mobileNavLinks = [
 
 export const favoriteTech = [
   {
-    svgIcon: nextjsIcon,
+    icon: IconNextjs,
     label: 'Next.js',
   },
   {
-    svgIcon: typescriptIcon,
+    icon: IconTypescript,
     label: 'TypeScript',
   },
   {
-    svgIcon: tailwindIcon,
+    icon: IconTailwindcss,
     label: 'Tailwind',
   },
   {
-    svgIcon: figmaIcon,
-    label: 'Figma',
+    icon: IconShopify,
+    label: 'Shopify',
   },
 ];
 
 export const otherTech = [
   {
-    svgIcon: shopifyIcon,
-    label: 'Shopify',
+    icon: IconFigma,
+    label: 'Figma',
   },
   {
-    svgIcon: illustratorIcon,
+    icon: IconAdobeillustrator,
     label: 'Illustrator',
   },
   {
-    svgIcon: reactIcon,
+    icon: IconHtml5,
+    label: 'HTML',
+  },
+  {
+    icon: IconJavascript,
+    label: 'JavaScript',
+  },
+  {
+    icon: IconReact,
     label: 'React',
   },
   {
-    svgIcon: githubDarkIcon,
+    icon: IconGithub,
     label: 'GitHub',
-  },
-  {
-    svgIcon: jiraIcon,
-    label: 'Jira',
-  },
-  {
-    svgIcon: vercelIcon,
-    label: 'Vercel',
   },
 ];

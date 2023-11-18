@@ -10,6 +10,7 @@ import { BREAKPOINTS } from '@/src/constants/breakpoints';
 import { mySocialLinks } from '@/src/constants/data';
 import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
+import Icon from '@/src/components/icon';
 import heroBgImg from '/public/hero-bg-img.jpeg';
 import headshot from '/public/my-portrait.jpg';
 
@@ -84,7 +85,7 @@ const Hero = ({ scrollToRef }: Props) => {
             target="_blank"
             className="relative h-[32px] w-[32px] lg:h-[36px] lg:w-[36px] xl:h-[48px] xl:w-[48px]"
           >
-            <Image src={link.icon} alt={link.label} fill />
+            <Icon icon={link.icon} />
           </Link>
         ))}
       </motion.div>

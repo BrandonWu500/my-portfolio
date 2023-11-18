@@ -1,58 +1,21 @@
-import { VariantProps, cva } from 'cva';
 import { motion } from 'framer-motion';
 import { Inter } from 'next/font/google';
-import Image, { StaticImageData } from 'next/image';
-import { useMemo } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 const inter = Inter({ subsets: ['latin'], variable: '--body-font' });
 
-const skillStyles = cva(
-  `${inter.variable} font-body flex flex-col items-center gap-2 p-2`,
-  {
-    variants: {
-      intent: {
-        primary: 'text-neutral-50',
-        secondary: 'text-neutral-900',
-      },
-      size: {
-        small: 'text-xs',
-        medium: '',
-        large: 'text-xl gap-4',
-      },
-    },
-  }
-);
-
-type Props = VariantProps<typeof skillStyles> & {
-  svgIcon: StaticImageData;
+type Props = {
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
   label: string;
+  className?: string;
   animationDirection?: 'left' | 'right';
 };
 const Skill = ({
-  size = 'small',
-  intent = 'primary',
-  svgIcon,
+  icon: Icon,
   label,
+  className,
   animationDirection = 'left',
 }: Props) => {
-  const svgSize = useMemo(() => {
-    if (!svgIcon) return;
-
-    switch (size) {
-      case 'small':
-        return 24;
-
-      case 'medium':
-        return 48;
-
-      case 'large':
-        return 72;
-
-      default:
-        return 24;
-    }
-  }, [size, svgIcon]);
-
   return (
     <motion.div
       initial={{
@@ -61,9 +24,12 @@ const Skill = ({
       whileInView={{ x: 0 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className={skillStyles({ size, intent })}
+      className={twMerge(
+        `${inter.variable} flex flex-col items-center gap-2 p-2 font-body`,
+        className
+      )}
     >
-      <Image src={svgIcon} alt="skill icon" width={svgSize} height={svgSize} />
+      <Icon className={'h-12 w-12 xl:h-16 xl:w-16'} />
       <p className="mt-1">{label}</p>
     </motion.div>
   );

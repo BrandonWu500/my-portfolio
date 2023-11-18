@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo } from 'react';
 
@@ -11,6 +10,7 @@ import { BREAKPOINTS } from '@/src/constants/breakpoints';
 import { mySocialLinks } from '@/src/constants/data';
 import useWindowDimensions from '@/src/hooks/useWindowDimensions';
 
+import Icon from '@/src/components/icon';
 import arrowUpCircle from '/public/arrow-up-circle.svg';
 
 type Props = {};
@@ -44,13 +44,7 @@ const Contact = (props: Props) => {
           The best way to reach me is to send me an email.
         </p>
         <div className="flex items-center gap-3 xl:gap-6">
-          <Image
-            src={mySocialLinks.email.icon}
-            alt="mail icon"
-            width={svgSize}
-            height={svgSize}
-            className="hidden lg:block"
-          />
+          <Icon icon={mySocialLinks.email.icon} />
           <p className="text-xl font-semibold xl:text-4xl">
             brandonwu500@gmail.com
           </p>
@@ -89,9 +83,8 @@ const Contact = (props: Props) => {
                   href={link.url}
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="relative h-[32px] w-[32px] lg:h-[36px] lg:w-[36px] xl:h-[48px] xl:w-[48px]"
                 >
-                  <Image src={link.icon} alt={link.label} fill />
+                  <Icon icon={link.icon} />
                 </Link>
               ))}
           </div>
