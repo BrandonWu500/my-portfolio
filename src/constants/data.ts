@@ -1,10 +1,10 @@
 import IconFigma from '@/src/components/icon/figma';
 import IconGithub from '@/src/components/icon/github';
-import IconHtml5 from '@/src/components/icon/html';
 import IconAdobeillustrator from '@/src/components/icon/illustrator';
-import IconJavascript from '@/src/components/icon/javascript';
+import IconJirasoftware from '@/src/components/icon/jira';
 import IconMail from '@/src/components/icon/mail';
 import IconNextjs from '@/src/components/icon/nextjs';
+import IconAdobephotoshop from '@/src/components/icon/photoshop';
 import IconReact from '@/src/components/icon/react';
 import IconShopify from '@/src/components/icon/shopify';
 import IconTailwindcss from '@/src/components/icon/tailwind';
@@ -88,16 +88,12 @@ export const otherTech = [
     label: 'Figma',
   },
   {
+    icon: IconAdobephotoshop,
+    label: 'Photoshop',
+  },
+  {
     icon: IconAdobeillustrator,
     label: 'Illustrator',
-  },
-  {
-    icon: IconHtml5,
-    label: 'HTML',
-  },
-  {
-    icon: IconJavascript,
-    label: 'JavaScript',
   },
   {
     icon: IconReact,
@@ -106,5 +102,9 @@ export const otherTech = [
   {
     icon: IconGithub,
     label: 'GitHub',
+  },
+  {
+    icon: IconJirasoftware,
+    label: 'Jira',
   },
 ];
