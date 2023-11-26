@@ -50,10 +50,10 @@ const Skills = (props: Props) => {
           duration: 1.5,
         }}
         viewport={{ once: true }}
-        className="mx-auto w-full bg-neutral-300 p-5 text-center text-neutral-700 xl:mt-5 xl:max-w-4xl"
+        className="mx-auto w-full bg-neutral-300 p-5 text-center text-neutral-700 xl:mt-8 xl:max-w-4xl xl:p-8"
       >
-        <h4 className="mb-4 font-heading text-lg font-semibold lg:text-xl xl:mb-8">
-          Other Tech I Use
+        <h4 className="mb-6 font-heading text-lg font-medium lg:text-xl xl:mb-8 xl:font-semibold">
+          Other Skills I Have
         </h4>
         <div className="mx-auto grid max-w-xs grid-cols-3 place-items-center gap-y-4 lg:max-w-3xl lg:grid-cols-6 xl:max-w-none">
           {otherTech.map((tech) => (
